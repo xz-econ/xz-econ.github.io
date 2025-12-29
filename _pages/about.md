@@ -55,7 +55,7 @@ The Blackwell frontier induced by graph-based privacy structures (including diff
 
 <hr style="border-top: 1.5px dashed #ccc; margin: 20px 0;">
 
-# Algorithmic Collusion
+## Algorithmic Collusion
 
 ---
 
