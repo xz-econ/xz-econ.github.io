@@ -10,8 +10,6 @@ redirect_from:
 
 # 👦 About Me
 
-<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto; width: 70%;">
-
 Hi! I am **Zhang Xu** (徐张), a PhD student in Economics at **Renmin University of China**.
 
 My research interests include **the economics of algorithms**, **information design**, and **mechanism design**.
@@ -19,17 +17,15 @@ My research interests include **the economics of algorithms**, **information des
 📮 xuzhang (at) ruc.edu.cn  
 📝 [Curriculum Vitae](../assets/XZ_CV.pdf)
 
-<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto; width: 70%;">
+<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto;">
 
 # 📑 Publications
 
 *No publications yet* 😭
 
-<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto; width: 70%;">
+<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto;">
 
 # ✍️ Working Papers
-
-<hr style="border-top: 1.5px dashed #bbb; margin: 20px 0;">
 
 ## Privacy Preservation
 
@@ -57,7 +53,7 @@ The Blackwell frontier induced by graph-based privacy structures (including diff
 </em></small>
 </font>
 
-<hr style="border-top: 1.5px dashed #bbb; margin: 20px 0;">
+<hr style="border-top: 1.5px dashed #ccc; margin: 20px 0;">
 
 # Algorithmic Collusion
 
@@ -86,21 +82,21 @@ AIs can collude through market allocation, with different allocation patterns em
 </em></small>
 </font>
 
-<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto; width: 70%;">
+<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto;">
 
 # 💬 Presentations
 
 - **2025**: 36th Stony Brook International Conference on Game Theory; NUS Theory Lunch  
 - **2024**: 7th World Congress of the Game Theory Society (Beijing); PKU–NUS Annual International Conference on Quantitative Finance and Economics (Suzhou)
 
-<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto; width: 70%;">
+<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto;">
 
 # 🎖 Honors and Awards
 
 - **2022**: Honored Graduate, Renmin University of China  
 - **2020**: National First Prize, China Undergraduate Mathematical Contest in Modeling
 
-<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto; width: 70%;">
+<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto;">
 
 # 📖 Education
 
