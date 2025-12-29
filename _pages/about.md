@@ -31,8 +31,7 @@ My research interests include **the economics of algorithms**, **information des
 
 ---
 
-**Privacy-Constrained Signals**  
-[[arXiv](https://arxiv.org/abs/2511.21196)]  
+**Privacy-Constrained Signals** [[arXiv](https://arxiv.org/abs/2511.21196)]  
 with [Wei Zhao](https://weizhao-econ.weebly.com/research.html), 2025  
 
 <font color="blue">
@@ -43,8 +42,7 @@ We characterize the set of feasible signal structures under general privacy cons
 
 ---
 
-**Privacy Structure and the Blackwell Frontier**  
-[[arXiv](https://arxiv.org/abs/2511.10226)]  
+**Privacy Structure and the Blackwell Frontier** [[arXiv](https://arxiv.org/abs/2511.10226)]  
 with [Wei Zhao](https://weizhao-econ.weebly.com/research.html), 2025  
 
 <font color="blue">
@@ -59,8 +57,7 @@ The Blackwell frontier induced by graph-based privacy structures (including diff
 
 ---
 
-**On the Mechanism Underlying Algorithmic Collusion**  
-[[arXiv](https://arxiv.org/abs/2409.01147)]  
+**On the Mechanism Underlying Algorithmic Collusion** [[arXiv](https://arxiv.org/abs/2409.01147)]  
 with [Wei Zhao](https://weizhao-econ.weebly.com/research.html), 2024  
 
 <font color="blue">
@@ -71,8 +68,7 @@ Algorithmic collusion arises from forced convergence, while a lower discount fac
 
 ---
 
-**Artificial Intelligence, Data, and Competition**  
-[[arXiv](https://arxiv.org/abs/2403.06150)]  
+**Artificial Intelligence, Data, and Competition** [[arXiv](https://arxiv.org/abs/2403.06150)]  
 with [Mingsheng Zhang](https://mingsheng-zhang.github.io/) and [Wei Zhao](https://weizhao-econ.weebly.com/research.html), 2024  
 *(Latest version: 2025)*  
 
