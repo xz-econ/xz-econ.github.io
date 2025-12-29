@@ -9,6 +9,9 @@ redirect_from:
 ---
 
 # 👦 About Me
+
+<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto; width: 70%;">
+
 Hi! I am **Zhang Xu** (徐张), a PhD student in Economics at **Renmin University of China**.
 
 My research interests include **the economics of algorithms**, **information design**, and **mechanism design**.
@@ -16,21 +19,22 @@ My research interests include **the economics of algorithms**, **information des
 📮 xuzhang (at) ruc.edu.cn  
 📝 [Curriculum Vitae](../assets/XZ_CV.pdf)
 
----
-
 # 📑 Publications
-*No publications yet* 😭
 
----
+<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto; width: 70%;">
+
+*No publications yet* 😭
 
 # ✍️ Working Papers
 
+<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto; width: 70%;">
+
 ## Privacy Preservation
 
-<hr style="border-top: 1px dashed #ccc;">
+<hr style="border-top: 1.5px dashed #bbb; margin: 20px 0;">
 
 **Privacy-Constrained Signals**  
-[arXiv:2511.21196](https://arxiv.org/abs/2511.21196)  
+[[arXiv](https://arxiv.org/abs/2511.21196)]  
 with [Wei Zhao](https://weizhao-econ.weebly.com/research.html), 2025  
 
 <font color="blue">
@@ -42,7 +46,7 @@ We characterize the set of feasible signal structures under general privacy cons
 ---
 
 **Privacy Structure and the Blackwell Frontier**  
-[arXiv:2511.10226](https://arxiv.org/abs/2511.10226)  
+[[arXiv](https://arxiv.org/abs/2511.10226)]  
 with [Wei Zhao](https://weizhao-econ.weebly.com/research.html), 2025  
 
 <font color="blue">
@@ -51,14 +55,14 @@ The Blackwell frontier induced by graph-based privacy structures (including diff
 </em></small>
 </font>
 
----
+# Algorithmic Collusion
 
-## Algorithmic Collusion
+<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto; width: 70%;">
 
-<hr style="border-top: 1px dashed #ccc;">
+<hr style="border-top: 1.5px dashed #bbb; margin: 20px 0;">
 
 **On the Mechanism Underlying Algorithmic Collusion**  
-[arXiv:2409.01147](https://arxiv.org/abs/2409.01147)  
+[[arXiv](https://arxiv.org/abs/2409.01147)]  
 with [Wei Zhao](https://weizhao-econ.weebly.com/research.html), 2024  
 
 <font color="blue">
@@ -70,7 +74,7 @@ Algorithmic collusion arises from forced convergence, while a lower discount fac
 ---
 
 **Artificial Intelligence, Data, and Competition**  
-[arXiv:2403.06150](https://arxiv.org/abs/2403.06150)  
+[[arXiv](https://arxiv.org/abs/2403.06150)]  
 with [Mingsheng Zhang](https://mingsheng-zhang.github.io/) and [Wei Zhao](https://weizhao-econ.weebly.com/research.html), 2024  
 *(Latest version: 2025)*  
 
@@ -80,33 +84,39 @@ AIs can collude through market allocation, with different allocation patterns em
 </em></small>
 </font>
 
----
-
 # 💬 Presentations
+
+<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto; width: 70%;">
+
 - **2025**: 36th Stony Brook International Conference on Game Theory; NUS Theory Lunch  
 - **2024**: 7th World Congress of the Game Theory Society (Beijing); PKU–NUS Annual International Conference on Quantitative Finance and Economics (Suzhou)
 
----
-
 # 🎖 Honors and Awards
+
+<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto; width: 70%;">
+
 - **2022**: Honored Graduate, Renmin University of China  
 - **2020**: National First Prize, China Undergraduate Mathematical Contest in Modeling
 
----
-
 # 📖 Education
+
+<hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto; width: 70%;">
+
 - **2022.09 – Present**: PhD student in Economics, Renmin University of China  
 - **2018.09 – 2022.06**: B.S. in Mathematics and Economics, Renmin University of China
 
-
-<hr>
+<hr style="width: 60%; margin: 30px auto;">
 
 <div style="text-align: center;">
   <small>
-    Last updated: {{ site.time | date: "%B %Y" }} ·  
-    Website forked from 
-    <a href="https://github.com/RayeRen/acad-homepage.github.io" target="_blank">
-      RayeRen
-    </a>
+    <span style="font-size: 0.85em;">
+      Last updated: {{ site.time | date: "%B %Y" }} ·  
+      Website forked from 
+      <a href="https://github.com/RayeRen/acad-homepage.github.io" target="_blank">
+        RayeRen
+      </a>
+    </span>
   </small>
 </div>
+
+<div style="height: 40px;"></div>
