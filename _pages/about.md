@@ -25,7 +25,7 @@ My research interests include **the economics of algorithms**, **information des
 
 <hr style="border: none; height: 2px; background-color: #ccc; margin: 40px auto;">
 
-# ✍️ Working Papers
+# ✍️ Working Papers{#working-papers}
 
 ## Privacy Preservation
 
