@@ -9,59 +9,83 @@ redirect_from:
 ---
 
 # 👦 About Me
-Hi! I'm Zhang XU (徐张), a PhD student in Economics at Renmin University of China.
+Hi! I am **Zhang Xu** (徐张), a PhD student in Economics at **Renmin University of China**.
 
-I am interested in **economics of algorithm**, **information design**, and **mechanism design**.
+My research interests include **the economics of algorithms**, **information design**, and **mechanism design**.
 
-📮 xuzhang (at) ruc.edu.cn
+📮 xuzhang (at) ruc.edu.cn  
+📝 [Curriculum Vitae](../assets/XZ_CV.pdf)
 
-📝 My [CV](../assets/XZ_CV.pdf)
-
-
+---
 
 # 📑 Publications
-0 Publication 😭
+*No publications yet* 😭
 
-
+---
 
 # ✍️ Working Papers
-**Privacy Preservation**
 
- ["Privacy-Constrained Signals,"](https://arxiv.org/abs/2511.21196) with [Wei ZHAO](https://weizhao-econ.weebly.com/research.html), 2025.
- 
-<font color="blue">*The characterization of feasible signal structures subject to general privacy constraints.*</font>
+### Privacy Preservation
 
+**Privacy-Constrained Signals**  
+[arXiv:2511.21196](https://arxiv.org/abs/2511.21196)  
+with [Wei Zhao](https://weizhao-econ.weebly.com/research.html), 2025  
 
+<font color="blue">
+<small><em>
+We characterize the set of feasible signal structures under general privacy constraints.
+</em></small>
+</font>
 
-["Privacy Structure and Blackwell Frontier,"](https://arxiv.org/abs/2511.10226) with [Wei ZHAO](https://weizhao-econ.weebly.com/research.html), 2025.
+**Privacy Structure and the Blackwell Frontier**  
+[arXiv:2511.10226](https://arxiv.org/abs/2511.10226)  
+with [Wei Zhao](https://weizhao-econ.weebly.com/research.html), 2025  
 
-<font color="blue">*The Blackwell frontier for graph-based privacy structure (including differential privacy) can be linked to semi-chain.*</font>
+<font color="blue">
+<small><em>
+The Blackwell frontier induced by graph-based privacy structures (including differential privacy) can be characterized by semi-chains.
+</em></small>
+</font>
 
+---
 
-**Algorithmic Collusion**
+### Algorithmic Collusion
 
-["On Mechanism Underlying Algorithmic Collusion,"](https://arxiv.org/abs/2409.01147) with [Wei ZHAO](https://weizhao-econ.weebly.com/research.html), 2024.
+**On the Mechanism Underlying Algorithmic Collusion**  
+[arXiv:2409.01147](https://arxiv.org/abs/2409.01147)  
+with [Wei Zhao](https://weizhao-econ.weebly.com/research.html), 2024  
 
-<font color="blue">*Algorithmic collusion is due to forced convergence, while discount factor slows down its convergence.*</font>
+<font color="blue">
+<small><em>
+Algorithmic collusion arises from forced convergence, while a lower discount factor slows down the convergence process.
+</em></small>
+</font>
 
+**Artificial Intelligence, Data, and Competition**  
+[arXiv:2403.06150](https://arxiv.org/abs/2403.06150)  
+with [Mingsheng Zhang](https://mingsheng-zhang.github.io/) and [Wei Zhao](https://weizhao-econ.weebly.com/research.html), 2024  
+*(Latest version: 2025)*  
 
-["Artificial Intelligence, Data and Competition,"](https://arxiv.org/abs/2403.06150) with [Mingsheng ZHANG](https://mingsheng-zhang.github.io/) and [Wei ZHAO](https://weizhao-econ.weebly.com/research.html), 2024. (Last Version: 2025)
+<font color="blue">
+<small><em>
+AIs can collude through market allocation, with different allocation patterns emerging under different market segmentations.
+</em></small>
+</font>
 
-<font color="blue">*AIs can collude through market allocation, while different allocation schemes emerge with different market segmentations.*</font>
-
+---
 
 # 💬 Presentations
-- **2025** the 36th Stony Brook International Conference on Game Theory, NUS Theory Lunch
-- **2024** the 7th World Congress of the Game Theory Society (Beijing), PKU-NUS Annual International Conference on Quantitative Finance and Economics (Suzhou)
+- **2025**: 36th Stony Brook International Conference on Game Theory; NUS Theory Lunch  
+- **2024**: 7th World Congress of the Game Theory Society (Beijing); PKU–NUS Annual International Conference on Quantitative Finance and Economics (Suzhou)
 
-
+---
 
 # 🎖 Honors and Awards
-- *2022*, Honored Graduate, Remin University of China.
-- *2020*, National First Prize in the China Undergraduate Mathematical Contest in Modeling.
+- **2022**: Honored Graduate, Renmin University of China  
+- **2020**: National First Prize, China Undergraduate Mathematical Contest in Modeling
 
+---
 
-
-# 📖 Educations
-- *2022.09 - now*, Renmin University of China, PhD student in Economics.
-- *2018.09 - 2022.06*, Renmin University of China, B.S. in Mathematics and Economics.
+# 📖 Education
+- **2022.09 – Present**: PhD student in Economics, Renmin University of China  
+- **2018.09 – 2022.06**: B.S. in Mathematics and Economics, Renmin University of China
