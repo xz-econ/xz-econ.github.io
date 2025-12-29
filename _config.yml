@@ -1,6 +1,6 @@
 # Site Settings
 title                    : "Zhang Xu"
-description              : "PhD student in Economics at Renmin University of China. Research interests: economics of algorithms, information design, and mechanism design."
+description              : "PhD student in Economics"
 repository               : "xz-econ.github.io"
 
 # Google Analytics (optional)
@@ -13,7 +13,7 @@ baidu_site_verification  :
 
 # Site Author
 author:
-  name             : "Zhang Xu"
+  name             : "XU, Zhang"
   avatar           : "images/xz.png"
   bio              : "Renmin University of China"
   location         : "Beijing, China"
