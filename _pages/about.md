@@ -33,7 +33,7 @@ I am interested in **economics of algorithm**, **information design**, and **mec
 
 
 
-["Privacy Structure and Blackwell Frontier,"] with [Wei ZHAO](https://weizhao-econ.weebly.com/research.html), 2025.
+["Privacy Structure and Blackwell Frontier,"](https://arxiv.org/abs/2511.10226) with [Wei ZHAO](https://weizhao-econ.weebly.com/research.html), 2025.
 
 <font color="blue">*The Blackwell frontier for graph-based privacy structure (including differential privacy) can be linked to semi-chain.*</font>
 
