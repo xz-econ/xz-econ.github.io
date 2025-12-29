@@ -25,7 +25,7 @@ My research interests include **the economics of algorithms**, **information des
 
 # ✍️ Working Papers
 
-### Privacy Preservation
+## Privacy Preservation
 
 **Privacy-Constrained Signals**  
 [arXiv:2511.21196](https://arxiv.org/abs/2511.21196)  
@@ -36,6 +36,8 @@ with [Wei Zhao](https://weizhao-econ.weebly.com/research.html), 2025
 We characterize the set of feasible signal structures under general privacy constraints.
 </em></small>
 </font>
+
+---
 
 **Privacy Structure and the Blackwell Frontier**  
 [arXiv:2511.10226](https://arxiv.org/abs/2511.10226)  
@@ -49,7 +51,7 @@ The Blackwell frontier induced by graph-based privacy structures (including diff
 
 ---
 
-### Algorithmic Collusion
+## Algorithmic Collusion
 
 **On the Mechanism Underlying Algorithmic Collusion**  
 [arXiv:2409.01147](https://arxiv.org/abs/2409.01147)  
@@ -60,6 +62,8 @@ with [Wei Zhao](https://weizhao-econ.weebly.com/research.html), 2024
 Algorithmic collusion arises from forced convergence, while a lower discount factor slows down the convergence process.
 </em></small>
 </font>
+
+---
 
 **Artificial Intelligence, Data, and Competition**  
 [arXiv:2403.06150](https://arxiv.org/abs/2403.06150)  
