@@ -1,9 +1,10 @@
+# main links links
 main:
-  -title: "Homepage"
-    url: "#-about-me"
+  - title: "Homepage"
+    url: "/#-about-me"
     
   - title: "Publications"
-    url: "#-publications"
+    url: "/#-publications"
 
   - title: "Working Papers"
-    url: "#-working-papers"
+    url: "/#-working-papers"
