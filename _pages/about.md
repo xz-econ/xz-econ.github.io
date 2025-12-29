@@ -27,6 +27,8 @@ My research interests include **the economics of algorithms**, **information des
 
 ## Privacy Preservation
 
+<hr style="border-top: 1px dashed #ccc;">
+
 **Privacy-Constrained Signals**  
 [arXiv:2511.21196](https://arxiv.org/abs/2511.21196)  
 with [Wei Zhao](https://weizhao-econ.weebly.com/research.html), 2025  
@@ -52,6 +54,8 @@ The Blackwell frontier induced by graph-based privacy structures (including diff
 ---
 
 ## Algorithmic Collusion
+
+<hr style="border-top: 1px dashed #ccc;">
 
 **On the Mechanism Underlying Algorithmic Collusion**  
 [arXiv:2409.01147](https://arxiv.org/abs/2409.01147)  
@@ -93,3 +97,16 @@ AIs can collude through market allocation, with different allocation patterns em
 # 📖 Education
 - **2022.09 – Present**: PhD student in Economics, Renmin University of China  
 - **2018.09 – 2022.06**: B.S. in Mathematics and Economics, Renmin University of China
+
+
+<hr>
+
+<div style="text-align: center;">
+  <small>
+    Last updated: {{ site.time | date: "%B %Y" }} ·  
+    Website forked from 
+    <a href="https://github.com/RayeRen/acad-homepage.github.io" target="_blank">
+      RayeRen
+    </a>
+  </small>
+</div>
