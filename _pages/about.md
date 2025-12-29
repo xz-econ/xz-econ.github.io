@@ -8,35 +8,31 @@ redirect_from:
   - /about.html
 ---
 
-{% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
-{% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
-{% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
-
-<span class='anchor' id='about-me'></span>
+# 👦 About Me
 Hi! I'm Zhang XU (徐张), a PhD student in Economics at Renmin University of China.
 
-I am interested in  economics of algorithm, information design, mechanism design.
+I am interested in **economics of algorithm**, **information design**, and **mechanism design**.
 
-Currently, my research focuses on two aspects: (1) characterizing the privacy-preserving mechanism under broad privacy constraints; (2) exploring the underlying mechanism of algorithmic collusion.
-
-# 🔥 News
+Email: xuzhang (at) ruc.edu.cn
+CV: [CV]
 
 # 📝 Publications
 0 Publication 😭
 
 # ✍️ Working Papers
+**Privacy Preservation**
+
+
+**Algorithmic Collusion**
 
 
 # 💬 Presentations
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+- **2025** the 36th Stony Brook International Conference on Game Theory, NUS Theory Lunch
+- **2024** the 7th World Congress of the Game Theory Society (Beijing), PKU-NUS Annual International Conference on Quantitative Finance and Economics (Suzhou)
 
 # 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2022*, Honored Graduate, Remin University of China.
+- *2020*, National First Prize in the China Undergraduate Mathematical Contest in Modeling.
 
 # 📖 Educations
 - *2022.09 - now*, Renmin University of China, PhD student in Economics.
