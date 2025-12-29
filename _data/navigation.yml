@@ -1,19 +1,18 @@
-# main links links
 main:
   - title: "About Me"
-    url: "/#about-me"
+    url: "#about-me"
 
   - title: "Publications"
-    url: "/#-publications"
+    url: "#publications"
 
   - title: "Working Papers"
-    url: "/#-working-papers"
+    url: "#working-papers"
 
   - title: "Presentations"
-    url: "/#-presentations"
+    url: "#presentations"
 
   - title: "Honors and Awards"
-    url: "/#-honors-and-awards"
+    url: "#honors-and-awards"
 
-  - title: "Educations"
-    url: "/#-educations"
+  - title: "Education"
+    url: "#education"
