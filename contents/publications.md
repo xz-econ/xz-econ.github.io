@@ -22,7 +22,7 @@
   with [Mingsheng Zhang](https://mingsheng-zhang.github.io/) and [Wei Zhao](https://weizhao-econ.weebly.com/research.html), 2024  
   *(Latest version: December 2025)*  
   <span style="color:#1f77b4;"><small><em>
-  AIs can collude through market allocation, with different allocation patterns emerging under different market segmentations.
+  AIs can collude through market allocation and the data advantage does not necessarily result in competitive advantage.
   </em></small></span>
 
 #### Publications
