@@ -12,3 +12,6 @@ B.S. in Mathematics and Economics, Renmin University of China, 2018–2022.
 
 #### Research Interests
 Digital Economics; Game Theory; AI in Games; Information Design; Mechanism Design
+
+
+[Curriculum Vitae](../assets/XZ_CV.pdf)
