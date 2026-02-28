@@ -168,20 +168,8 @@ body #mainNav .navbar-toggler {
 }
 
 /* 响应式调整 */
-@media (max-width: 576px) {
-    .navbar-logo {
-        width: 1rem;
-    }
-}
-
-@media (min-width: 577px) and (max-width: 992px) {
+@media (max-width: 991px) {
     .navbar-logo {
         width: 1.5rem;
-    }
-}
-
-@media (min-width: 993px) {
-    .navbar-logo {
-        width: 2.5rem;
     }
 }
