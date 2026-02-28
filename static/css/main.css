@@ -76,7 +76,7 @@ a:hover{
 
 /* 提高优先级，覆盖 #mainNav 的样式 */
 body #mainNav {
-    background-color: var(--bg-main) !important;  /* 宣纸色背景 */
+    background-color: #EEDDB8 !important;  /* 宣纸色背景 */
 }
 
 body #mainNav .navbar-brand {
