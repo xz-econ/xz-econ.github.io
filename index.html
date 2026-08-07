@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Academic Webpage" />
-    <meta name="author" content="xz-econ" />
+    <meta name="author" content="senli1073" />
     <title id="title"></title>
 
     <!-- Icon -->
@@ -25,6 +25,7 @@
         rel="stylesheet" />
 
     <!-- Core theme CSS (includes Bootstrap)-->
+    <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
     <link type="text/css" href="static/css/main.css" rel="stylesheet" />
 
     <!-- Bootstrap core JS-->
@@ -64,71 +65,78 @@
             }
         };
     </script>
-    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-    
+    <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <!-- Core JS-->
     <script type="text/javascript" src="static/js/scripts.js"></script>
     <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
 
 </head>
 
-<body id="page-top" class="site-loading">
-    <div id="page-skeleton" class="page-skeleton" aria-hidden="true">
-        <div class="skeleton-section skeleton-section-light">
-            <div class="container px-5">
-                <div class="skeleton-block skeleton-section-title"></div>
-                <div class="skeleton-block skeleton-line skeleton-line-long"></div>
-                <div class="skeleton-block skeleton-line"></div>
-                <div class="skeleton-block skeleton-line skeleton-line-short"></div>
-            </div>
-        </div>
-        <div class="skeleton-section skeleton-section-gray">
-            <div class="container px-5">
-                <div class="skeleton-block skeleton-section-title"></div>
-                <div class="skeleton-block skeleton-line skeleton-line-long"></div>
-                <div class="skeleton-block skeleton-line"></div>
-                <div class="skeleton-block skeleton-line skeleton-line-short"></div>
-            </div>
-        </div>
-    </div>
-
+<body id="page-top">
     <!-- Navigation-->
     <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
         <div class="container px-5">
-            <a id="page-top-title" class="navbar-brand fw-bold" href="#page-top">&nbsp;</a>
-            <!-- <a href="#page-top"><img src="static/assets/img/logo.svg" style="width: 11rem;"></a> -->
+            <a class="navbar-brand" href="#page-top">
+                <img src="static/assets/img/logo.svg" class="navbar-logo" alt="Logo">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 MENU
                 <i class="bi-list"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul id="navbar-items" class="navbar-nav ms-auto me-4 my-3 my-lg-0"></ul>
+                <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="#page-top">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="#publications">PAPERS</a>
+                    </li>
+
+                </ul>
             </div>
         </div>
     </nav>
+    <!-- Navigation-->
 
     <!-- Top Section -->
-    <section class="top-section" id="top-section">
-        <div class="top-section-bg top-section-bg-active" aria-hidden="true"></div>
-        <div class="top-section-bg" aria-hidden="true"></div>
-        <div class="top-section-content">
-            <div class="container px-5">
-                <h2 id="top-section-bg-text" class="text-white display-3 lh-1 font-alt"></h2>
-            </div>
-        </div>
+    <section class="top-section" style="background-image: url('static/assets/img/background.jpg');">
     </section>
     <!-- Top Section -->
 
     <!-- Photo -->
     <div class="container px-5">
         <div id="avatar">
-            <img class="shadow" src="static/assets/img/photo.jpg" alt="Profile photo">
+            <img class="shadow" src="static/assets/img/photo.jpg">
         </div>
     </div>
     <!-- Photo -->
-    
-    <main id="sections"></main>
+
+    <!-- Home -->
+    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="home">
+        <div class="container px-5">
+            <header>
+                <h2 id="home-subtitle"> </h2>
+                <!-- <span class="bi bi-list"></span> -->
+            </header>
+            <div class="main-body" id="home-md"></div>
+        </div>
+    </section>
+    <!-- Home -->
+
+    <!-- Publications -->
+    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
+        <div class="container px-5">
+            <header>
+                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;PAPERS</h2>
+            </header>
+            <div class="main-body" id="publications-md"></div>
+
+        </div>
+    </section>
+    <!-- Publications  -->
 
 
     <!-- Footer -->
@@ -139,6 +147,7 @@
             </div>
         </div>
     </footer>
+    <!-- Footer -->
 
 </body>
 
