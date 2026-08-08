@@ -112,7 +112,7 @@ body #mainNav .navbar-toggler {
 
 /* 柔和渐变块 */
 .bg-gradient-primary-to-secondary-light {
-    background: linear-gradient(45deg, #FBF7ED, #FDFBF5) !important;
+    background: linear-gradient(45deg, #F8F0DD, #FCF7EA) !important;
 }
 
 .bg-gradient-primary-to-secondary-gray {
