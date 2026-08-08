@@ -7,7 +7,7 @@
   </em></small></span>
 
 - **Artificial Intelligence, Data, and Competition** with [Mingsheng Zhang](https://mingsheng-zhang.github.io/) and [Wei Zhao](https://weizhao-econ.weebly.com/research.html)
-- [[Working Paper](https://arxiv.org/abs/2403.06150)] *(Latest version: Aug 2026)*  
+  [[Working Paper](https://arxiv.org/abs/2403.06150)] *(Latest version: Aug 2026)*  
   <span style="color:#7A5A3A;"><small><em>
   AIs can collude through market allocation and the data advantage does not necessarily result in competitive advantage.
   </em></small></span>
