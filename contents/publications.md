@@ -11,7 +11,7 @@
   </em></small></span>
 
 - **A Note on Market Segmentation and Bertrand Competition** with [Mingsheng Zhang](https://mingsheng-zhang.github.io/) and [Wei Zhao](https://weizhao-econ.weebly.com/research.html)  
-  [[Working Paper](https://365.kdocs.cn/l/cpHhDYaCcF4U)] **(Latest: Aug 2026)**
+  [[Working Paper](https://365.kdocs.cn/l/cpHhDYaCcF4U)] **(Latest: Aug 2026)**  
   <span style="color:#7A5A3A;"><small><em>
   Can some market segments earn positive profits under Bertrand competition? No.
   </em></small></span>
