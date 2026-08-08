@@ -1,5 +1,3 @@
-#### Working Papers
-
 - **Memoryless Algorithmic Collusion: Sure to Fail, Slow to Fall** with [Wei Zhao](https://weizhao-econ.weebly.com/research.html)  
   [[Working Paper](https://arxiv.org/abs/2409.01147)] *(Latest version: Aug 2026)*   
   <span style="color:#7A5A3A;"><small><em>
