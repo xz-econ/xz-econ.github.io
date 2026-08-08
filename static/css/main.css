@@ -116,7 +116,7 @@ body #mainNav .navbar-toggler {
 }
 
 .bg-gradient-primary-to-secondary-gray {
-    background: linear-gradient(45deg, #F7F0DF, #FBF7ED) !important;
+    background: linear-gradient(45deg, #FBF7ED, #F7F0DF) !important;
 }
 
 /* 顶部背景 */
