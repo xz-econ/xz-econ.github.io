@@ -163,17 +163,17 @@ body #mainNav .navbar-toggler {
         height: auto;
         top: auto;
         margin: -3.5rem auto 1.5rem;
-        padding: 1rem 0 0;
+        padding: 1rem 0 1.5rem;
         text-align: center;
         position: relative;
         z-index: 9000;
+        background-color: var(--bg-main);
     }
 
     #avatar img {
         width: clamp(110px, 35vw, 160px);
         height: auto;
-        border: 6px solid var(--bg-main);
-        background-color: var(--bg-main);
+        max-width: 100%;
         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
     }
 }
@@ -211,15 +211,15 @@ footer {
 }
 
 .footer-quote {
-    font-size: clamp(0.82rem, 2.3vw, 1rem);
+    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
     font-weight: 300;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.68);
 }
 
 .footer-meta {
-    margin-top: clamp(0.65rem, 2vw, 1rem);
-    font-size: clamp(0.62rem, 1.8vw, 0.78rem);
+    margin-top: clamp(0.5rem, 1.5vw, 0.8rem);
+    font-size: clamp(0.5rem, 1.1vw, 0.7rem);
     font-weight: 300;
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.68);
