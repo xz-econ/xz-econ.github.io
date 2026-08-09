@@ -158,36 +158,24 @@ body #mainNav .navbar-toggler {
 
 /* 平板和手机适配 */
 @media (max-width: 991px) {
-  .top-section {
-    height: clamp(12rem, 50vw, 18rem);
-    padding: 5rem 1rem;
-  }
+    #avatar {
+        float: none;
+        height: auto;
+        top: auto;
+        margin: -3.5rem auto 1.5rem;
+        padding: 1rem 0 0;
+        text-align: center;
+        position: relative;
+        z-index: 9000;
+    }
 
-  section header h2 {
-    font-size: clamp(1.5rem, 6vw, 2rem);
-    line-height: 1.35;
-  }
-
-  section .main-body {
-    font-size: 1rem;
-    line-height: 1.75;
-  }
-
-  #avatar {
-    float: none;
-    height: auto;
-    top: 0;
-    margin: 1.5rem auto;
-    text-align: center;
-  }
-
-  #avatar img {
-    width: clamp(110px, 35vw, 160px);
-  }
-
-  .navbar-logo {
-    width: 1.5rem;
-  }
+    #avatar img {
+        width: clamp(110px, 35vw, 160px);
+        height: auto;
+        border: 6px solid var(--bg-main);
+        background-color: var(--bg-main);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    }
 }
 
 /* 小手机进一步优化 */
