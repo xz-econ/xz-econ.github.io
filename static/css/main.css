@@ -1,16 +1,28 @@
 @import "./styles.css";
 
-:root{
-    --h-title-color:#46544C;      /* 墨绿灰标题 */
-    --accent-color:#7A5A3A;       /* 棕色强调 */
-    --bg-main:#FBF7ED;            /* 主背景宣纸色 */
+
+:root {
+    --h-title-color: #46544C;      /* 墨绿灰标题 */
+    --accent-color: #7A5A3A;       /* 棕色强调 */
+    --bg-main: #FBF7ED;            /* 宣纸色背景 */
+
+    /* responsive typography */
+    --fs-body: clamp(1rem, 1.1vw, 1.3rem);
+    --fs-small: clamp(0.7rem, 0.8vw, 0.85rem);
+    --fs-title: clamp(1.8rem, 3vw, 2.3rem);
 }
 
-/* 主背景 */
-body{
-    background-color: var(--bg-main);
-    color:#2B2B2B;
+
+/* 全局 */
+html {
+    font-size: clamp(14px, 1vw, 18px);
 }
+
+body {
+    background-color: var(--bg-main);
+    color: #2B2B2B;
+}
+
 
 /* Header */
 .header {
@@ -19,11 +31,13 @@ body{
     z-index: 10000;
 }
 
-/* 底部或色块 */
+
+/* Footer background */
 .bg-bottom {
     background-color: var(--h-title-color);
-    color:#F6ECD6;
+    color: #F6ECD6;
 }
+
 
 /* 顶部图片区域 */
 .top-section {
@@ -34,15 +48,11 @@ body{
     height: 25rem;
 }
 
-/* 不加暗层 */
-.top-section:before {
+.top-section::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0);
+    inset: 0;
+    background: rgba(0,0,0,0);
     pointer-events: none;
 }
 
@@ -50,127 +60,310 @@ body{
     font-weight: 400;
 }
 
-/* 标题 */
-section header h2{
-    font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+
+/* Section 标题 */
+section header h2 {
+
+    font-family: "Kanit",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif !important;
+
     color: var(--h-title-color);
-    font-size: 2.3rem;
-    line-height: 4rem;
+    font-size: var(--fs-title);
+    line-height: 1.8;
 }
+
 
 /* 正文 */
-section .main-body{
-    font-size: 1.3rem;
+section .main-body {
+
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: var(--fs-body);
     font-weight: 300;
-    line-height: 2.4rem;
+    line-height: 2.2;
 }
 
-/* 链接 */
-a{
+
+/* Links */
+a {
     color: var(--h-title-color);
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     color: var(--accent-color);
 }
 
-/* 提高优先级，覆盖 #mainNav 的样式 */
+
+/* Navigation */
 body #mainNav {
-    background-color: #EEDDB8 !important;  /* 宣纸色背景 */
+
+    background-color: #EEDDB8 !important;
+
 }
 
+
 body #mainNav .navbar-brand {
-    color: var(--h-title-color) !important;       /* 品牌文字墨绿灰 */
+
+    color: var(--h-title-color) !important;
+    font-size: var(--fs-body);
+
 }
+
 
 body #mainNav .navbar-brand:hover,
 body #mainNav .navbar-brand:active {
-    color: var(--accent-color) !important;        /* 悬停/点击时棕色 */
+
+    color: var(--accent-color) !important;
+
 }
+
+
 
 body #mainNav .navbar-nav .nav-item .nav-link {
-    color: var(--h-title-color) !important;       /* 导航文字墨绿灰 */
-    font-weight: 600;                              /* 保留原有字重 */
+
+    color: var(--h-title-color) !important;
+    font-size: var(--fs-small);
+    font-weight: 600;
+
 }
+
 
 body #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: var(--accent-color) !important;        /* 悬停棕色 */
+
+    color: var(--accent-color) !important;
+
 }
+
 
 body #mainNav .navbar-nav .nav-item .nav-link.active {
-    color: var(--h-title-color) !important;       /* 激活状态墨绿灰（可根据需要调整） */
-    border-bottom: 2px solid var(--accent-color) !important; /* 激活下划线棕色 */
-}
 
-/* 可选：调整 toggler 按钮颜色（如果需要） */
-body #mainNav .navbar-toggler {
     color: var(--h-title-color) !important;
-    border-color: rgba(0,0,0,0.1) !important;    /* 可自定义 */
+    border-bottom: 2px solid var(--accent-color) !important;
+
 }
 
 
-/* 柔和渐变块 */
+
+body #mainNav .navbar-toggler {
+
+    color: var(--h-title-color) !important;
+    border-color: rgba(0,0,0,0.1) !important;
+
+}
+
+
+
+/* 柔和渐变 */
 .bg-gradient-primary-to-secondary-light {
-    background: linear-gradient(45deg, #F8F0DD, #F6ECD6) !important;
+
+    background: linear-gradient(
+        45deg,
+        #F8F0DD,
+        #F6ECD6
+    ) !important;
+
 }
+
 
 .bg-gradient-primary-to-secondary-gray {
-    background: linear-gradient(45deg, #FBF7ED, #F7F0DF) !important;
+
+    background: linear-gradient(
+        45deg,
+        #FBF7ED,
+        #F7F0DF
+    ) !important;
+
 }
+
+
 
 /* 顶部背景 */
 .top-bg {
+
     background-position: center;
     background-size: cover;
     width: 100%;
     height: 100%;
+
 }
+
 
 .top-bg::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0);
+
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0);
+
 }
 
-/* 头像 */
+
+
+/* Avatar */
+
 #avatar {
+
     position: relative;
+
     height: 0;
-    top:min(-65px,max(-100px,calc(-1*100vw/12)));
-    max-width: 55em;
-    margin: 0 1.5rem 0 0;
-    float: right;
-    z-index: 9000;
+
+    top: min(
+        -65px,
+        max(
+            -100px,
+            calc(-1 * 100vw / 12)
+        )
+    );
+
+    max-width:55em;
+
+    margin:0 1.5rem 0 0;
+
+    float:right;
+
+    z-index:9000;
+
 }
+
 
 #avatar img {
-    height: max(130px,min(200px,calc(100vw/6)));
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+
+    height:
+    max(
+        130px,
+        min(
+            200px,
+            calc(100vw / 6)
+        )
+    );
+
+    box-shadow:
+        5px 5px 10px rgba(0,0,0,0.15);
+
 }
 
-@media screen and (max-width: 991px) {
+
+
+@media screen and (max-width:991px) {
+
     #avatar {
-        margin: 0;
+
+        margin:0;
+
     }
+
 }
 
 
-/* 自定义logo样式 */
+
+/* Logo */
+
 .navbar-logo {
-    width: 2rem;           /* 默认宽度 */
-    height: auto;           /* 保持比例 */
-    max-width: 100%;        /* 防止溢出 */
-    transition: width 0.2s ease; /* 可选：平滑过渡 */
+
+    width:2rem;
+
+    height:auto;
+
+    max-width:100%;
+
+    transition:
+        width 0.2s ease;
+
 }
 
-/* 响应式调整 */
-@media (max-width: 991px) {
+
+
+@media(max-width:991px) {
+
     .navbar-logo {
-        width: 1.5rem;
+
+        width:1.5rem;
+
     }
+
+}
+
+
+
+/* Footer */
+
+footer {
+
+    letter-spacing:0.04em;
+
+}
+
+
+.footer-quote {
+
+    font-size:
+        clamp(
+            0.85rem,
+            1vw,
+            1.1rem
+        );
+
+    font-weight:300;
+
+    color:
+        rgba(
+            246,
+            236,
+            214,
+            0.75
+        );
+
+}
+
+
+
+.footer-meta {
+
+    margin-top:1.5rem;
+
+    font-size:var(--fs-small);
+
+    font-weight:300;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.5
+        );
+
+}
+
+
+
+.footer-meta a {
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.8
+        );
+
+    text-decoration:none;
+
+}
+
+
+
+.footer-meta a:hover {
+
+    color:white;
+
 }
