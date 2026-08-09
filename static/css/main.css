@@ -218,25 +218,41 @@ body #mainNav .navbar-toggler {
 /* Footer */
 footer {
     letter-spacing: 0.04em;
+    padding-top: clamp(2rem, 6vw, 3rem) !important;
+    padding-bottom: clamp(2rem, 6vw, 3rem) !important;
 }
 
 .footer-quote {
-    font-size: clamp(0.85rem, 1vw, 1.1rem);
+    font-size: clamp(0.9rem, 2.8vw, 1.1rem);
     font-weight: 300;
+    line-height: 1.6;
 }
 
 .footer-meta {
-    margin-top: 1.5rem;
-    font-size: var(--font-small);
+    margin-top: clamp(0.8rem, 3vw, 1.5rem);
+    font-size: clamp(0.68rem, 2.2vw, 0.85rem);
     font-weight: 300;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.72);
 }
 
 .footer-meta a {
     color: rgba(255, 255, 255, 0.72);
     text-decoration: none;
-    transition: color 0.2s ease, opacity 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 .footer-meta a:hover {
-    color: rgba(255, 255, 255, 0.88);
+    color: rgba(255, 255, 255, 0.86);
+}
+
+@media (max-width: 576px) {
+    footer {
+        letter-spacing: 0.02em;
+    }
+
+    .footer-meta {
+        font-size: 0.68rem;
+        line-height: 1.5;
+    }
 }
