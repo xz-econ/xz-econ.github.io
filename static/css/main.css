@@ -211,13 +211,14 @@ footer {
 }
 
 .footer-quote {
-    font-size: clamp(0.9rem, 2.8vw, 1.1rem);
+    font-size: clamp(0.82rem, 2.3vw, 1rem);
     font-weight: 300;
     line-height: 1.6;
+    color: rgba(255, 255, 255, 0.68);
 }
 
 .footer-meta {
-    margin-top: clamp(0.7rem, 2vw, 1.2rem);
+    margin-top: clamp(0.65rem, 2vw, 1rem);
     font-size: clamp(0.62rem, 1.8vw, 0.78rem);
     font-weight: 300;
     line-height: 1.5;
@@ -231,7 +232,7 @@ footer {
 }
 
 .footer-meta a:hover {
-    color: rgba(255, 255, 255, 0.82);
+    color: rgba(255, 255, 255, 0.76);
 }
 
 @media (max-width: 576px) {
