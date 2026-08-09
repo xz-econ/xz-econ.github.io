@@ -1,350 +1,242 @@
 @import "./styles.css";
 
 :root {
-    --h-title-color: #46544C;      /* 墨绿灰标题 */
-    --accent-color: #7A5A3A;       /* 棕色强调 */
-    --bg-main: #FBF7ED;            /* 宣纸色背景 */
-
-    /* responsive font size */
-    /* 保持原大小，同时根据屏幕变化 */
-    --font-body: clamp(1.05rem, 1.1vw, 1.3rem);
-    --font-title: clamp(1.9rem, 2vw, 2.3rem);
-    --font-small: clamp(0.65rem, 0.7vw, 0.75rem);
+  --h-title-color: #46544C;      /* 墨绿灰标题 */
+  --accent-color: #7A5A3A;       /* 棕色强调 */
+  --bg-main: #FBF7ED;            /* 主背景宣纸色 */
 }
-
 
 /* 主背景 */
 body {
-    background-color: var(--bg-main);
-    color: #2B2B2B;
+  background-color: var(--bg-main);
+  color: #2B2B2B;
 }
-
 
 /* Header */
 .header {
-    border-bottom: solid 2px var(--h-title-color);
-    background-color: var(--bg-main);
-    z-index: 10000;
+  border-bottom: solid 2px var(--h-title-color);
+  background-color: var(--bg-main);
+  z-index: 10000;
 }
 
-
-/* Footer */
+/* 底部或色块 */
 .bg-bottom {
-    background-color: var(--h-title-color);
-    color: #F6ECD6;
+  background-color: var(--h-title-color);
+  color: #F6ECD6;
 }
-
 
 /* 顶部图片区域 */
 .top-section {
-    position: relative;
-    padding: 10rem 0;
-    background-position: center;
-    background-size: cover;
-    height: 25rem;
+  position: relative;
+  padding: clamp(4rem, 10vw, 10rem) 0;
+  background-position: center;
+  background-size: cover;
+  height: clamp(14rem, 45vw, 25rem);
 }
 
-
+/* 不加暗层 */
 .top-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0);
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  pointer-events: none;
 }
-
 
 .top-section h2 {
-    font-weight: 400;
+  font-weight: 400;
 }
-
 
 /* 标题 */
 section header h2 {
-
-    font-family: "Kanit",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    sans-serif !important;
-
-    color: var(--h-title-color);
-
-    font-size: var(--font-title);
-
-    line-height: 4rem;
+  font-family: "Kanit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  color: var(--h-title-color);
+  font-size: clamp(1.6rem, 5vw, 2.3rem);
+  line-height: 1.4;
 }
-
 
 /* 正文 */
 section .main-body {
-
-    font-size: var(--font-body);
-
-    font-weight: 300;
-
-    line-height: 2.4rem;
+  font-size: clamp(1rem, 3.5vw, 1.3rem);
+  font-weight: 300;
+  line-height: 1.8;
 }
-
 
 /* 链接 */
 a {
-    color: var(--h-title-color);
-    text-decoration: none;
+  color: var(--h-title-color);
+  text-decoration: none;
 }
-
 
 a:hover {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
-
-
-/* Navbar */
-
+/* 提高优先级，覆盖 #mainNav 的样式 */
 body #mainNav {
-
-    background-color: #EEDDB8 !important;
-
+  background-color: #EEDDB8 !important;
 }
-
 
 body #mainNav .navbar-brand {
-
-    color: var(--h-title-color) !important;
-
-    font-size: var(--font-body);
-
+  color: var(--h-title-color) !important;
 }
-
 
 body #mainNav .navbar-brand:hover,
 body #mainNav .navbar-brand:active {
-
-    color: var(--accent-color) !important;
-
+  color: var(--accent-color) !important;
 }
-
 
 body #mainNav .navbar-nav .nav-item .nav-link {
-
-    color: var(--h-title-color) !important;
-
-    font-size: var(--font-small);
-
-    font-weight: 600;
-
+  color: var(--h-title-color) !important;
+  font-weight: 600;
 }
-
 
 body #mainNav .navbar-nav .nav-item .nav-link:hover {
-
-    color: var(--accent-color) !important;
-
+  color: var(--accent-color) !important;
 }
-
 
 body #mainNav .navbar-nav .nav-item .nav-link.active {
-
-    color: var(--h-title-color) !important;
-
-    border-bottom: 2px solid var(--accent-color) !important;
-
+  color: var(--h-title-color) !important;
+  border-bottom: 2px solid var(--accent-color) !important;
 }
 
-
+/* toggler 按钮 */
 body #mainNav .navbar-toggler {
-
-    color: var(--h-title-color) !important;
-
-    border-color: rgba(0,0,0,0.1) !important;
-
+  color: var(--h-title-color) !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
 }
 
-
-
-/* 柔和渐变 */
-
+/* 柔和渐变块 */
 .bg-gradient-primary-to-secondary-light {
-
-    background: linear-gradient(
-        45deg,
-        #F8F0DD,
-        #F6ECD6
-    ) !important;
-
+  background: linear-gradient(45deg, #F8F0DD, #F6ECD6) !important;
 }
-
 
 .bg-gradient-primary-to-secondary-gray {
-
-    background: linear-gradient(
-        45deg,
-        #FBF7ED,
-        #F7F0DF
-    ) !important;
-
+  background: linear-gradient(45deg, #FBF7ED, #F7F0DF) !important;
 }
-
-
 
 /* 顶部背景 */
-
 .top-bg {
-
-    background-position: center;
-
-    background-size: cover;
-
-    width: 100%;
-
-    height: 100%;
-
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
-
 
 .top-bg::before {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background: rgba(0,0,0,0);
-
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
 }
-
-
 
 /* 头像 */
-
 #avatar {
-
-    position: relative;
-
-    height: 0;
-
-    top: min(
-        -65px,
-        max(
-            -100px,
-            calc(-1 * 100vw / 12)
-        )
-    );
-
-    max-width: 55em;
-
-    margin: 0 1.5rem 0 0;
-
-    float: right;
-
-    z-index: 9000;
-
+  position: relative;
+  height: 0;
+  top: clamp(-100px, -8vw, -65px);
+  max-width: 55em;
+  margin: 0 1.5rem 0 0;
+  float: right;
+  z-index: 9000;
 }
-
 
 #avatar img {
-
-    height:
-    max(
-        130px,
-        min(
-            200px,
-            calc(100vw / 6)
-        )
-    );
-
-    box-shadow:
-    5px 5px 10px rgba(0,0,0,0.15);
-
+  width: clamp(120px, 16vw, 200px);
+  height: auto;
+  max-width: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
 }
 
-
-
-@media screen and (max-width:991px) {
-
-    #avatar {
-
-        margin:0;
-
-    }
-
-}
-
-
-
-/* Logo */
-
+/* 自定义 logo 样式 */
 .navbar-logo {
-
-    width:2rem;
-
-    height:auto;
-
-    max-width:100%;
-
-    transition:width 0.2s ease;
-
+  width: clamp(1.4rem, 4vw, 2rem);
+  height: auto;
+  max-width: 100%;
+  transition: width 0.2s ease;
 }
 
+/* 平板和手机适配 */
+@media (max-width: 991px) {
+  .top-section {
+    height: clamp(12rem, 50vw, 18rem);
+    padding: 5rem 1rem;
+  }
 
+  section header h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    line-height: 1.35;
+  }
 
-@media(max-width:991px) {
+  section .main-body {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
 
-    .navbar-logo {
+  #avatar {
+    float: none;
+    height: auto;
+    top: 0;
+    margin: 1.5rem auto;
+    text-align: center;
+  }
 
-        width:1.5rem;
+  #avatar img {
+    width: clamp(110px, 35vw, 160px);
+  }
 
-    }
-
+  .navbar-logo {
+    width: 1.5rem;
+  }
 }
 
+/* 小手机进一步优化 */
+@media (max-width: 576px) {
+  .top-section {
+    height: 12rem;
+    padding: 4rem 1rem;
+  }
 
+  section header h2 {
+    font-size: 1.45rem;
+  }
+
+  section .main-body {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  #avatar img {
+    width: 120px;
+  }
+
+  .navbar-logo {
+    width: 1.35rem;
+  }
+}
 
 /* Footer */
-
 footer {
-
-    letter-spacing:0.04em;
-
+    letter-spacing: 0.04em;
 }
-
 
 .footer-quote {
-
-    font-size:clamp(0.85rem,1vw,1.1rem);
-
-    font-weight:300;
-
+    font-size: clamp(0.85rem, 1vw, 1.1rem);
+    font-weight: 300;
 }
-
 
 .footer-meta {
-
-    margin-top:1.5rem;
-
-    font-size:var(--font-small);
-
-    font-weight:300;
-
+    margin-top: 1.5rem;
+    font-size: var(--font-small);
+    font-weight: 300;
 }
-
 
 .footer-meta a {
-
-    color:rgba(255,255,255,0.8);
-
-    text-decoration:none;
-
+    color: rgba(255, 255, 255, 0.72);
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
 }
 
-
 .footer-meta a:hover {
-
-    color:white;
-
+    color: rgba(255, 255, 255, 0.88);
 }
