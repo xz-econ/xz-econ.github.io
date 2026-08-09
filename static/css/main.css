@@ -158,16 +158,21 @@ body #mainNav .navbar-toggler {
 
 /* 平板和手机适配 */
 @media (max-width: 991px) {
+    .top-section {
+        height: clamp(18rem, 75vw, 26rem);
+        padding: 5rem 1rem 7rem;
+        background-position: center;
+        background-size: cover;
+    }
+
     #avatar {
         float: none;
         height: auto;
         top: auto;
-        margin: -3.5rem auto 1.5rem;
-        padding: 1rem 0 1.5rem;
+        margin: -6rem auto 2rem;
         text-align: center;
         position: relative;
         z-index: 9000;
-        background-color: var(--bg-main);
     }
 
     #avatar img {
