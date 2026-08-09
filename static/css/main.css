@@ -157,30 +157,10 @@ body #mainNav .navbar-toggler {
 }
 
 /* 平板和手机适配 */
-@media (max-width: 991px) {
-    .top-section {
-        height: clamp(18rem, 75vw, 26rem);
-        padding: 5rem 1rem 7rem;
-        background-position: center;
-        background-size: cover;
-    }
-
-    #avatar {
-        float: none;
-        height: auto;
-        top: auto;
-        margin: -6rem auto 2rem;
-        text-align: center;
-        position: relative;
-        z-index: 9000;
-    }
-
-    #avatar img {
-        width: clamp(110px, 35vw, 160px);
-        height: auto;
-        max-width: 100%;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
-    }
+@media screen and (max-width: 991px) {
+  #avatar {
+    margin: 0;
+  }
 }
 
 /* 小手机进一步优化 */
