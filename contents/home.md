@@ -6,7 +6,7 @@ Email: xuzhang[at]ruc.edu.cn
 
 #### Education
 
-PhD in Economics, Renmin University of China, 2022–Present
+PhD in Economics, Renmin University of China, 2022–Present \
 B.S. in Mathematics and Economics, Renmin University of China, 2018–2022
 
 #### Research Interests
