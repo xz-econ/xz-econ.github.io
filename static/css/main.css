@@ -14,12 +14,12 @@
   --accent-color: #95643B;
   --bg-main: #F3EEDF;
   --bg-paper: #FAF6EA;
-  --bg-soft: #E9E1CF;
+  --bg-soft: #E4D8C2;
   --ink: #252B26;
   --ink-soft: #59665D;
   --line: rgba(47, 73, 60, .20);
   --line-strong: rgba(47, 73, 60, .32);
-  --nav-bg: #F3EEDF;
+  --nav-bg: #95643B;
   --footer-bg: #20382D;
   --footer-ink: #F5EEDC;
   --shadow-soft: 0 12px 34px rgba(38, 49, 42, .07);
@@ -29,7 +29,8 @@
 }
 
 html {
-  font-size: 110%;
+  /* Global typography scale: increase all rem-based text by 8%. */
+  font-size: 115%;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
 }
@@ -101,7 +102,7 @@ body #mainNav {
 }
 
 body #mainNav .navbar-brand {
-  color: var(--h-title-color) !important;
+  color: #FFF8E9 !important;
   font-family: "Newsreader", Georgia, serif !important;
   font-size: 1.35rem;
   font-weight: 600;
@@ -111,14 +112,14 @@ body #mainNav .navbar-brand {
 
 body #mainNav .navbar-brand:hover,
 body #mainNav .navbar-brand:active {
-  color: var(--accent-color) !important;
+  color: #E8D2A9 !important;
 }
 
 body #mainNav .navbar-nav .nav-item .nav-link {
   position: relative;
   margin: 0 .18rem;
   padding: .65rem .8rem;
-  color: #405448 !important;
+  color: #FFF8E9 !important;
   font-size: .82rem;
   font-weight: 600;
   letter-spacing: .045em;
@@ -140,7 +141,7 @@ body #mainNav .navbar-nav .nav-item .nav-link::after {
 
 body #mainNav .navbar-nav .nav-item .nav-link:hover,
 body #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: var(--h-title-color) !important;
+  color: #FFFFFF !important;
 }
 
 body #mainNav .navbar-nav .nav-item .nav-link:hover::after,
@@ -150,8 +151,8 @@ body #mainNav .navbar-nav .nav-item .nav-link.active::after {
 
 body #mainNav .navbar-toggler {
   padding: .55rem .7rem;
-  color: var(--h-title-color) !important;
-  border: 1px solid var(--line-strong) !important;
+  color: #FFF8E9 !important;
+  border: 1px solid rgba(255,255,255,.38) !important;
   border-radius: 7px;
 }
 
@@ -312,16 +313,25 @@ section header::after {
 
 /* Soft background panels used by the original template */
 .bg-gradient-primary-to-secondary-light {
-  background: linear-gradient(135deg, #F3EFE5 0%, #EDE8DC 100%) !important;
+  background: linear-gradient(135deg, #EAE0CC 0%, #E3D7C1 100%) !important;
 }
 
 .bg-gradient-primary-to-secondary-gray {
-  background: linear-gradient(135deg, #FBFAF6 0%, #F2EFE7 100%) !important;
+  background: linear-gradient(135deg, #F2EBDD 0%, #EAE1D0 100%) !important;
 }
 
 .bg-bottom {
   background: var(--footer-bg);
   color: var(--footer-ink);
+}
+
+
+/* Slightly richer warm-paper background for research/publication sections */
+section#research,
+section#publications,
+section.research-section,
+section.publications-section {
+  background-color: #EAE0CC;
 }
 
 /* Links: understated editorial underline */
@@ -455,7 +465,8 @@ footer a:focus-visible {
 .footer-quote {
   color: rgba(243, 238, 227, .78);
   font-family: "Newsreader", Georgia, serif;
-  font-size: clamp(.9rem, 1.5vw, 1.1rem);
+  font-size: clamp(.78rem, 1.15vw, .9rem);
+  font-style: italic;
   font-weight: 400;
   line-height: 1.7;
 }
@@ -640,17 +651,12 @@ footer a:focus-visible {
 .publication-title {
   display: block;
   margin: 0 0 .42rem;
-  color: #3E604B;
-  font-family: "Newsreader", Georgia, serif;
-  font-size: clamp(1.42rem, 2.322vw, 1.82rem);
+  color: var(--ink);
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(1.12rem, 1.55vw, 1.28rem);
   font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: -.025em;
-  transition: color .2s ease;
-}
-
-.publication:hover .publication-title {
-  color: #895B32;
+  line-height: 1.45;
+  letter-spacing: 0;
 }
 
 .publication-authors {
@@ -825,3 +831,17 @@ section .main-body ul:has(> li > strong:first-child) > li > br ~ a {
     font-size: 1.42rem;
   }
 }
+
+
+/* FINAL OVERRIDES: requested typography and color refinements */
+html { font-size: 115%; }
+.footer-quote { font-size: clamp(.78rem, 1.15vw, .9rem); }
+.publication-title {
+  color: var(--ink) !important;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: clamp(1.12rem, 1.55vw, 1.28rem) !important;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.45;
+}
+.publication:hover .publication-title { color: var(--ink) !important; }
