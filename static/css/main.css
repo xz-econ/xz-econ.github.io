@@ -29,8 +29,7 @@
 }
 
 html {
-  /* Global typography scale: increase all rem-based text by 8%. */
-  font-size: 108%;
+  font-size: 110%;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
 }
@@ -722,7 +721,7 @@ section .main-body ul:has(> li > strong:first-child) > li > br ~ a:hover {
 
   .publication-title,
   section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
   }
 
   .publication-authors,
