@@ -29,8 +29,7 @@
 }
 
 html {
-  /* Global typography scale: increase all rem-based text by 8%. */
-  font-size: 115%;
+  font-size: 125%;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
 }
