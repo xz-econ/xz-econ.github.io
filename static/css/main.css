@@ -19,7 +19,7 @@
   --ink-soft: #68716A;
   --line: rgba(53, 72, 63, .14);
   --line-strong: rgba(53, 72, 63, .24);
-  --nav-bg: rgba(248, 246, 240, .92);
+  --nav-bg: #F8F6F0;
   --footer-bg: #263A32;
   --footer-ink: #F3EEE3;
   --shadow-soft: 0 12px 34px rgba(38, 49, 42, .07);
@@ -88,8 +88,6 @@ strong, b {
   z-index: 10000;
   border-bottom: 1px solid var(--line);
   background: var(--nav-bg);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
 }
 
 body #mainNav {
@@ -98,8 +96,6 @@ body #mainNav {
   padding-bottom: .8rem;
   border-bottom: 1px solid var(--line);
   background: var(--nav-bg) !important;
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
   transition: background-color .25s var(--ease), box-shadow .25s var(--ease);
 }
 
@@ -173,54 +169,84 @@ body #mainNav .navbar-toggler:focus {
   transform: translateY(-1px);
 }
 
-/* Hero / top banner */
+/* ---------------------------------------------------------
+   HERO: CLEAR CHINESE SCROLL-PAINTING BANNER
+   Keep the source artwork crisp. No blur, glass effect, or
+   white wash overlay is applied to the image.
+   --------------------------------------------------------- */
 .top-section {
   position: relative;
   display: flex;
-  min-height: clamp(18rem, 38vw, 31rem);
+  min-height: clamp(18rem, 26vw, 27rem);
   height: auto;
   align-items: center;
   overflow: hidden;
-  padding: clamp(5rem, 10vw, 8.5rem) 0;
-  background-color: #E9E5D9;
-  background-position: center;
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  background-color: #E9E1CF;
+  background-position: center 48%;
   background-size: cover;
+  background-repeat: no-repeat;
   isolation: isolate;
+  border-bottom: 1px solid rgba(93, 79, 58, .18);
 }
 
+/* Disable the template's pale overlay completely. */
 .top-section::before {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(248,246,240,.86) 0%, rgba(248,246,240,.58) 48%, rgba(248,246,240,.12) 100%);
+  content: none !important;
+  display: none !important;
+}
+
+/* A fine scroll-like rule, not an image overlay. */
+.top-section::after {
   content: "";
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    rgba(133, 99, 61, .10),
+    rgba(133, 99, 61, .42),
+    rgba(133, 99, 61, .10));
   pointer-events: none;
 }
 
 .top-section h2 {
+  position: relative;
+  z-index: 3;
   max-width: 14ch;
   margin-bottom: .8rem;
-  color: var(--h-title-color);
+  color: #35483F;
+  font-family: "Newsreader", Georgia, serif !important;
   font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 500;
   line-height: 1.02;
   letter-spacing: -.045em;
+  text-shadow: 0 1px 0 rgba(248, 246, 240, .18);
 }
 
 .top-bg {
   position: relative;
   width: 100%;
   min-height: 100%;
-  background-position: center;
+  background-position: center 48%;
   background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1 !important;
+  filter: none !important;
 }
 
+/* The original template may add a second overlay here. */
 .top-bg::before {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(248,246,240,.55), rgba(248,246,240,.06));
-  content: "";
-  pointer-events: none;
+  content: none !important;
+  display: none !important;
+}
+
+.top-bg img,
+.top-section img {
+  opacity: 1 !important;
+  filter: none !important;
 }
 
 /* Profile portrait */
@@ -481,13 +507,9 @@ footer a:focus-visible {
 
 @media (max-width: 767.98px) {
   .top-section {
-    min-height: 17rem;
-    padding: 4.5rem 0;
+    min-height: 16rem;
+    padding: 4rem 0;
     background-position: 58% center;
-  }
-
-  .top-section::before {
-    background: linear-gradient(90deg, rgba(248,246,240,.9), rgba(248,246,240,.52));
   }
 
   .top-section h2 {
@@ -521,8 +543,9 @@ footer a:focus-visible {
   }
 
   .top-section {
-    min-height: 14rem;
-    padding: 3.6rem 1rem;
+    min-height: 13rem;
+    padding: 3.2rem 1rem;
+    background-position: 58% center;
   }
 
   #avatar {
@@ -553,5 +576,218 @@ footer a:focus-visible {
     transition-duration: .01ms !important;
     animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+/* ---------------------------------------------------------
+   RESEARCH / WORKING PAPERS
+   Use .publication-list > .publication for precise control.
+   The ul/li rules below also remove bullets from the current
+   Markdown-style publication list.
+   --------------------------------------------------------- */
+
+/* Preferred semantic markup */
+.publication-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 1.5rem 0 0;
+}
+
+.publication {
+  padding: 1.45rem 0 1.55rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.publication:first-child {
+  padding-top: .35rem;
+}
+
+.publication-title {
+  display: block;
+  margin: 0 0 .42rem;
+  color: #526B5B;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(1.42rem, 2.15vw, 1.82rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -.025em;
+  transition: color .2s ease;
+}
+
+.publication:hover .publication-title {
+  color: #806044;
+}
+
+.publication-authors {
+  margin: 0 0 .5rem;
+  color: #606A62;
+  font-size: .96rem;
+  line-height: 1.65;
+}
+
+.publication-authors a {
+  color: #526B5B;
+  text-decoration: underline;
+  text-decoration-color: rgba(82, 107, 91, .28);
+  text-underline-offset: 3px;
+}
+
+.publication-status {
+  margin: .12rem 0 .28rem;
+  color: #3D4941;
+  font-size: .92rem;
+  line-height: 1.6;
+}
+
+.publication-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .25rem .7rem;
+  margin: .18rem 0 0;
+  color: #858A82;
+  font-size: .76rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: .015em;
+}
+
+.publication-meta a {
+  color: #806044;
+  font-size: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  text-decoration-color: rgba(128, 96, 68, .35);
+  text-underline-offset: 3px;
+}
+
+.publication-meta a:hover {
+  color: #526B5B;
+  text-decoration: underline;
+}
+
+.publication-meta .meta-separator {
+  color: #B4B2A9;
+}
+
+/* Bullet-free styling for the existing Markdown-generated ul/li list.
+   The first bold phrase is treated as the paper title. */
+section .main-body ul:has(> li > strong:first-child) {
+  margin: 1.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+section .main-body ul:has(> li > strong:first-child) > li {
+  padding: 1.35rem 0 1.45rem;
+  border-bottom: 1px solid var(--line);
+  list-style: none;
+  color: #606A62;
+  font-size: .96rem;
+  line-height: 1.7;
+}
+
+section .main-body ul:has(> li > strong:first-child) > li::marker {
+  content: "";
+}
+
+section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
+  display: block;
+  margin: 0 0 .42rem;
+  color: #526B5B;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(1.42rem, 2.15vw, 1.82rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -.025em;
+}
+
+section .main-body ul:has(> li > strong:first-child) > li > br ~ a {
+  color: #806044;
+  font-size: .78rem;
+  font-weight: 600;
+}
+
+section .main-body ul:has(> li > strong:first-child) > li > br ~ a:hover {
+  color: #526B5B;
+}
+
+@media (max-width: 576px) {
+  .publication {
+    padding: 1.15rem 0 1.25rem;
+  }
+
+  .publication-title,
+  section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
+    font-size: 1.35rem;
+  }
+
+  .publication-authors,
+  section .main-body ul:has(> li > strong:first-child) > li {
+    font-size: .91rem;
+  }
+
+  .publication-meta,
+  section .main-body ul:has(> li > strong:first-child) > li > br ~ a {
+    font-size: .73rem;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   FINAL OVERRIDES — ensure legacy styles cannot reintroduce
+   blur, opacity, or a pale veil over the Chinese painting.
+   --------------------------------------------------------- */
+.header,
+body #mainNav {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.top-section,
+.top-bg {
+  filter: none !important;
+}
+
+.top-section::before,
+.top-bg::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* Keep the paper-and-ink palette consistent across the page. */
+body {
+  background-color: #F8F6F0;
+}
+
+.bg-bottom,
+footer {
+  background-color: #263A32 !important;
+}
+
+/* Slightly more refined publication typography. */
+.publication-title,
+section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
+  color: #40594B;
+  font-size: clamp(1.55rem, 2.35vw, 1.95rem);
+  line-height: 1.24;
+}
+
+.publication-meta,
+section .main-body ul:has(> li > strong:first-child) > li > br ~ a {
+  color: #89877E;
+  font-size: .76rem;
+}
+
+.publication-meta a,
+section .main-body ul:has(> li > strong:first-child) > li > br ~ a {
+  color: #8A6546;
+}
+
+@media (max-width: 576px) {
+  .publication-title,
+  section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
+    font-size: 1.42rem;
   }
 }
