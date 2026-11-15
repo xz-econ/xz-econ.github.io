@@ -1,7 +1,7 @@
 <div class="publication-list">
 
   <article class="publication">
-    <div class="publication-title">Artificial Intelligence, Data, and Competition</div>
+    <div class="publication-title">Artificial Intelligence, Data and Competition</div>
     <p class="publication-authors">
       with <a href="https://mingsheng-zhang.github.io/" target="_blank" rel="noopener noreferrer">Mingsheng Zhang</a>,
       <a href="https://weizhao-econ.weebly.com/research.html" target="_blank" rel="noopener noreferrer">Wei Zhao</a>
