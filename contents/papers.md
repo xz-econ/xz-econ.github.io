@@ -6,7 +6,7 @@
       with <a href="https://mingsheng-zhang.github.io/" target="_blank" rel="noopener noreferrer">Mingsheng Zhang</a>,
       <a href="https://weizhao-econ.weebly.com/research.html" target="_blank" rel="noopener noreferrer">Wei Zhao</a>
     </p>
-    <p class="publication-status"><strong>Revise &amp; Resubmit</strong> @ Economic Journal</p>
+    <p class="publication-status">Revise &amp; Resubmit @ <strong>Economic Journal</strong></p>
     <div class="publication-meta">
       <a href="https://arxiv.org/abs/2403.06150" target="_blank" rel="noopener noreferrer">Latest Version</a>
       <span>Last updated: Aug 2026</span>
