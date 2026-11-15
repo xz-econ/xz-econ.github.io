@@ -44,7 +44,7 @@
   </article>
 
   <article class="publication">
-    <div class="publication-title">Privacy Structure and the Blackwell Frontier</div>
+    <div class="publication-title">Privacy Structure and Blackwell Frontier</div>
     <p class="publication-authors">
       with <a href="https://weizhao-econ.weebly.com/research.html" target="_blank" rel="noopener noreferrer">Wei Zhao</a>
     </p>
