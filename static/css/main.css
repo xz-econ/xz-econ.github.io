@@ -10,18 +10,18 @@
 
 :root {
   color-scheme: light;
-  --h-title-color: #35483F;
-  --accent-color: #98724C;
-  --bg-main: #F8F6F0;
-  --bg-paper: #FCFBF7;
-  --bg-soft: #F0EDE4;
-  --ink: #292D29;
-  --ink-soft: #68716A;
-  --line: rgba(53, 72, 63, .14);
-  --line-strong: rgba(53, 72, 63, .24);
-  --nav-bg: #F8F6F0;
-  --footer-bg: #263A32;
-  --footer-ink: #F3EEE3;
+  --h-title-color: #2F493C;
+  --accent-color: #95643B;
+  --bg-main: #F3EEDF;
+  --bg-paper: #FAF6EA;
+  --bg-soft: #E9E1CF;
+  --ink: #252B26;
+  --ink-soft: #59665D;
+  --line: rgba(47, 73, 60, .20);
+  --line-strong: rgba(47, 73, 60, .32);
+  --nav-bg: #F3EEDF;
+  --footer-bg: #20382D;
+  --footer-ink: #F5EEDC;
   --shadow-soft: 0 12px 34px rgba(38, 49, 42, .07);
   --shadow-hover: 0 18px 42px rgba(38, 49, 42, .12);
   --radius-card: 12px;
@@ -69,8 +69,8 @@ section header h2 {
 
 section .main-body {
   max-width: 74ch;
-  color: #454B46;
-  font-size: clamp(1rem, 1.2096.48vw, 1.1rem);
+  color: #343D36;
+  font-size: clamp(1.08rem, 1.2096vw, 1.188rem);
   font-weight: 400;
   line-height: 1.9;
 }
@@ -118,7 +118,7 @@ body #mainNav .navbar-nav .nav-item .nav-link {
   position: relative;
   margin: 0 .18rem;
   padding: .65rem .8rem;
-  color: #526057 !important;
+  color: #405448 !important;
   font-size: .82rem;
   font-weight: 600;
   letter-spacing: .045em;
@@ -455,8 +455,7 @@ footer a:focus-visible {
 .footer-quote {
   color: rgba(243, 238, 227, .78);
   font-family: "Newsreader", Georgia, serif;
-  font-size: clamp(.95rem, 1.62vw, 1.12rem);
-  font-style: italic;
+  font-size: clamp(.9rem, 1.5vw, 1.1rem);
   font-weight: 400;
   line-height: 1.7;
 }
@@ -507,6 +506,25 @@ footer a:focus-visible {
 }
 
 @media (max-width: 767.98px) {
+  #avatar {
+    position: static !important;
+    top: auto !important;
+    float: none !important;
+    clear: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto !important;
+    margin: 1.25rem auto 1.5rem !important;
+    z-index: 1;
+  }
+
+  #avatar img {
+    display: block;
+    margin: 0 auto;
+  }
+
   .top-section {
     min-height: 16rem;
     padding: 4rem 0;
@@ -549,13 +567,28 @@ footer a:focus-visible {
     background-position: 58% center;
   }
 
+  /* Mobile portrait occupies its own row; never overlaps the text below. */
   #avatar {
-    top: -48px;
-    margin-right: .25rem;
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    float: none !important;
+    clear: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto !important;
+    margin: 1.25rem auto 1.5rem !important;
+    z-index: 1;
   }
 
   #avatar img {
-    width: 112px;
+    display: block;
+    width: 116px;
+    max-width: 38vw;
+    height: auto;
+    margin: 0 auto;
     border-width: 4px;
     border-radius: 8px;
   }
@@ -607,7 +640,7 @@ footer a:focus-visible {
 .publication-title {
   display: block;
   margin: 0 0 .42rem;
-  color: #526B5B;
+  color: #3E604B;
   font-family: "Newsreader", Georgia, serif;
   font-size: clamp(1.42rem, 2.322vw, 1.82rem);
   font-weight: 600;
@@ -617,18 +650,18 @@ footer a:focus-visible {
 }
 
 .publication:hover .publication-title {
-  color: #806044;
+  color: #895B32;
 }
 
 .publication-authors {
   margin: 0 0 .5rem;
-  color: #606A62;
+  color: #4F5D53;
   font-size: .96rem;
   line-height: 1.65;
 }
 
 .publication-authors a {
-  color: #526B5B;
+  color: #3E604B;
   text-decoration: underline;
   text-decoration-color: rgba(82, 107, 91, .28);
   text-underline-offset: 3px;
@@ -647,7 +680,7 @@ footer a:focus-visible {
   align-items: baseline;
   gap: .25rem .7rem;
   margin: .18rem 0 0;
-  color: #858A82;
+  color: #6E766D;
   font-size: .76rem;
   font-weight: 400;
   line-height: 1.6;
@@ -655,7 +688,7 @@ footer a:focus-visible {
 }
 
 .publication-meta a {
-  color: #806044;
+  color: #895B32;
   font-size: inherit;
   font-weight: 600;
   text-decoration: none;
@@ -664,7 +697,7 @@ footer a:focus-visible {
 }
 
 .publication-meta a:hover {
-  color: #526B5B;
+  color: #3E604B;
   text-decoration: underline;
 }
 
@@ -684,7 +717,7 @@ section .main-body ul:has(> li > strong:first-child) > li {
   padding: 1.35rem 0 1.45rem;
   border-bottom: 1px solid var(--line);
   list-style: none;
-  color: #606A62;
+  color: #4F5D53;
   font-size: .96rem;
   line-height: 1.7;
 }
@@ -696,7 +729,7 @@ section .main-body ul:has(> li > strong:first-child) > li::marker {
 section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
   display: block;
   margin: 0 0 .42rem;
-  color: #526B5B;
+  color: #3E604B;
   font-family: "Newsreader", Georgia, serif;
   font-size: clamp(1.42rem, 2.322vw, 1.82rem);
   font-weight: 600;
@@ -705,13 +738,13 @@ section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
 }
 
 section .main-body ul:has(> li > strong:first-child) > li > br ~ a {
-  color: #806044;
+  color: #895B32;
   font-size: .78rem;
   font-weight: 600;
 }
 
 section .main-body ul:has(> li > strong:first-child) > li > br ~ a:hover {
-  color: #526B5B;
+  color: #3E604B;
 }
 
 @media (max-width: 576px) {
@@ -721,7 +754,7 @@ section .main-body ul:has(> li > strong:first-child) > li > br ~ a:hover {
 
   .publication-title,
   section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
   }
 
   .publication-authors,
