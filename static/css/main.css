@@ -1,47 +1,65 @@
 @import "./styles.css";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap");
 
-/* ---------------------------------------------------------
-   PREMIUM ACADEMIC / EDITORIAL THEME
-   Drop-in custom stylesheet for Start Bootstrap New Age.
-   Keeps the original selectors and warm green / ivory palette.
-   --------------------------------------------------------- */
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap');
+/*
+ * Replace the supplied custom stylesheet with this file; do not append it.
+ * Keep styles.css and the existing artwork URL declarations in place.
+ * Softened paper / sage palette, with the existing layout and type scale.
+ */
 
 :root {
   color-scheme: light;
-  --h-title-color: #2F493C;
-  --accent-color: #95643B;
-  --bg-main: #F3EEDF;
-  --bg-paper: #FAF6EA;
-  --bg-soft: #E4D8C2;
-  --ink: #252B26;
-  --ink-soft: #59665D;
-  --line: rgba(47, 73, 60, .20);
-  --line-strong: rgba(47, 73, 60, .32);
-  --nav-bg: #95643B;
-  --footer-bg: #20382D;
-  --footer-ink: #F5EEDC;
-  --shadow-soft: 0 12px 34px rgba(38, 49, 42, .07);
-  --shadow-hover: 0 18px 42px rgba(38, 49, 42, .12);
-  --radius-card: 12px;
+  --sample-header-yellow: #DFD3B5;
+  --sample-yellow-1: #F3EDDC;
+  --sample-yellow-2: #F0E9D6;
+  --sample-yellow-3: #EDE5CF;
+  --sample-yellow-4: #EFE7D3;
+  --sample-paper: #F2ECDB;
+  --sample-paper-deep: #EAE2CB;
+  --sample-green: #6E7565;
+  --sample-green-deep: #606955;
+  --sample-green-soft: #858B78;
+
+  --h-title-color: #505A4C;
+  --accent-color: #898167;
+  --bg-main: var(--sample-paper);
+  --bg-paper: var(--sample-paper);
+  --bg-soft: var(--sample-paper-deep);
+  --ink: #3D4339;
+  --ink-soft: #616A5C;
+  --line: rgba(76, 83, 64, .14);
+  --line-strong: rgba(76, 83, 64, .23);
+  --nav-bg: var(--sample-header-yellow);
+  --footer-bg: var(--sample-green);
+  --footer-ink: #FFFBEF;
+  --shadow-soft: none;
+  --shadow-hover: none;
+  --radius-card: 4px;
   --ease: cubic-bezier(.2, .7, .2, 1);
+  --font-body: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Shared by the introductory text and every publication text element. */
+  --body-font-size: clamp(1.1rem, 1.25vw, 1.22rem);
+
+  /* Shared by the first content section and the mobile portrait row. */
+  --first-section-bg: var(--sample-yellow-1);
 }
 
 html {
-  font-size: 115%;
+  font-size: 108% !important;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
+  background-color: var(--bg-main);
 }
 
 body {
-  background: var(--bg-main);
+  background-color: var(--bg-main);
   color: var(--ink);
-  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.75;
-  letter-spacing: .005em;
+  letter-spacing: 0;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -51,7 +69,6 @@ body {
   background: var(--h-title-color);
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6,
 section header h2,
 .top-section h2 {
@@ -63,65 +80,69 @@ section header h2,
 
 section header h2 {
   margin-bottom: 1.25rem;
-  font-size: clamp(1.9rem, 3.672vw, 2.65rem);
-  line-height: 1.18;
+  font-size: clamp(2rem, 3.2vw, 2.55rem);
+  line-height: 1.2;
+  letter-spacing: -.02em;
 }
 
 section .main-body {
-  max-width: 74ch;
-  color: #343D36;
-  font-size: clamp(1.08rem, 1.2096vw, 1.188rem);
+  max-width: 72ch;
+  color: #444C40;
+  font-size: var(--body-font-size);
   font-weight: 400;
-  line-height: 1.9;
+  line-height: 1.85;
 }
 
 p {
-  margin-bottom: 1.15rem;
+  margin-bottom: 1.08rem;
 }
 
 strong, b {
-  color: #303B34;
+  color: var(--ink);
   font-weight: 600;
 }
 
 /* Navigation */
 .header {
   z-index: 10000;
-  border-bottom: 1px solid var(--line);
-  background: var(--nav-bg);
+}
+
+.header,
+body #mainNav {
+  background: var(--nav-bg) !important;
+  border-bottom: 1px solid rgba(87, 83, 62, .14) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
 }
 
 body #mainNav {
-  min-height: 76px;
-  padding-top: .8rem;
-  padding-bottom: .8rem;
-  border-bottom: 1px solid var(--line);
-  background: var(--nav-bg) !important;
-  transition: background-color .25s var(--ease), box-shadow .25s var(--ease);
+  min-height: 70px;
+  padding-top: .55rem;
+  padding-bottom: .55rem;
+}
+
+body #mainNav .navbar-brand,
+body #mainNav .navbar-nav .nav-item .nav-link,
+body #mainNav .navbar-toggler {
+  color: #505849 !important;
 }
 
 body #mainNav .navbar-brand {
-  color: #FFF8E9 !important;
   font-family: "Newsreader", Georgia, serif !important;
-  font-size: 1.35rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 500;
   letter-spacing: -.02em;
   transition: color .2s ease;
-}
-
-body #mainNav .navbar-brand:hover,
-body #mainNav .navbar-brand:active {
-  color: #E8D2A9 !important;
 }
 
 body #mainNav .navbar-nav .nav-item .nav-link {
   position: relative;
   margin: 0 .18rem;
   padding: .65rem .8rem;
-  color: #FFF8E9 !important;
-  font-size: .82rem;
-  font-weight: 600;
-  letter-spacing: .045em;
+  font-size: .88rem;
+  font-weight: 500;
+  letter-spacing: .015em;
   transition: color .2s ease;
 }
 
@@ -131,16 +152,18 @@ body #mainNav .navbar-nav .nav-item .nav-link::after {
   bottom: .35rem;
   left: .8rem;
   height: 1px;
-  background: var(--accent-color);
+  background: #818773;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
   transition: transform .25s var(--ease);
 }
 
+body #mainNav .navbar-brand:hover,
+body #mainNav .navbar-brand:active,
 body #mainNav .navbar-nav .nav-item .nav-link:hover,
 body #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #FFFFFF !important;
+  color: #374133 !important;
 }
 
 body #mainNav .navbar-nav .nav-item .nav-link:hover::after,
@@ -150,13 +173,12 @@ body #mainNav .navbar-nav .nav-item .nav-link.active::after {
 
 body #mainNav .navbar-toggler {
   padding: .55rem .7rem;
-  color: #FFF8E9 !important;
-  border: 1px solid rgba(255,255,255,.38) !important;
+  border: 1px solid rgba(64, 82, 71, .25) !important;
   border-radius: 7px;
 }
 
 body #mainNav .navbar-toggler:focus {
-  box-shadow: 0 0 0 3px rgba(152, 114, 76, .15);
+  box-shadow: 0 0 0 3px rgba(137, 129, 103, .15);
 }
 
 .navbar-logo {
@@ -170,11 +192,8 @@ body #mainNav .navbar-toggler:focus {
   transform: translateY(-1px);
 }
 
-/* ---------------------------------------------------------
-   HERO: CLEAR CHINESE SCROLL-PAINTING BANNER
-   Keep the source artwork crisp. No blur, glass effect, or
-   white wash overlay is applied to the image.
-   --------------------------------------------------------- */
+/* Hero: preserve the image declared in styles.css or in the HTML.
+   Do not reset background-image or apply the section paper fills here. */
 .top-section {
   position: relative;
   display: flex;
@@ -183,48 +202,11 @@ body #mainNav .navbar-toggler:focus {
   align-items: center;
   overflow: hidden;
   padding: clamp(4rem, 8vw, 7rem) 0;
-  background-color: #E9E1CF;
   background-position: center 48%;
   background-size: cover;
   background-repeat: no-repeat;
   isolation: isolate;
-  border-bottom: 1px solid rgba(93, 79, 58, .18);
-}
-
-/* Disable the template's pale overlay completely. */
-.top-section::before {
-  content: none !important;
-  display: none !important;
-}
-
-/* A fine scroll-like rule, not an image overlay. */
-.top-section::after {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  background: linear-gradient(90deg,
-    rgba(133, 99, 61, .10),
-    rgba(133, 99, 61, .42),
-    rgba(133, 99, 61, .10));
-  pointer-events: none;
-}
-
-.top-section h2 {
-  position: relative;
-  z-index: 3;
-  max-width: 14ch;
-  margin-bottom: .8rem;
-  color: #35483F;
-  font-family: "Newsreader", Georgia, serif !important;
-  font-size: clamp(2.5rem, 6.48vw, 5rem);
-  font-weight: 500;
-  line-height: 1.02;
-  letter-spacing: -.045em;
-  text-shadow: 0 1px 0 rgba(248, 246, 240, .18);
+  border-bottom: 1px solid var(--line);
 }
 
 .top-bg {
@@ -234,20 +216,49 @@ body #mainNav .navbar-toggler:focus {
   background-position: center 48%;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 1 !important;
-  filter: none !important;
 }
 
-/* The original template may add a second overlay here. */
-.top-bg::before {
+.top-section,
+.top-bg {
+  background-color: transparent !important;
+  background-blend-mode: normal !important;
+  mix-blend-mode: normal !important;
+  opacity: 1 !important;
+  filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.top-section::before,
+.top-section::after,
+.top-bg::before,
+.top-bg::after {
   content: none !important;
   display: none !important;
+}
+
+.top-section .container,
+.top-bg .container {
+  background-color: transparent !important;
 }
 
 .top-bg img,
 .top-section img {
   opacity: 1 !important;
   filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+.top-section h2 {
+  position: relative;
+  z-index: 3;
+  max-width: 14ch;
+  margin-bottom: .8rem;
+  font-size: clamp(2.5rem, 6.48vw, 5rem);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -.045em;
+  text-shadow: 0 1px 0 rgba(248, 246, 240, .18);
 }
 
 /* Profile portrait */
@@ -268,28 +279,27 @@ body #mainNav .navbar-toggler:focus {
   object-fit: cover;
   border: 5px solid var(--bg-paper);
   border-radius: 10px;
-  background: var(--bg-paper);
-  box-shadow: 0 10px 30px rgba(30, 42, 35, .18);
-  transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+  background-color: var(--bg-paper);
 }
 
+#avatar img,
 #avatar img:hover {
-  box-shadow: 0 16px 36px rgba(30, 42, 35, .22);
-  transform: translateY(-4px);
+  transform: none;
+  box-shadow: none;
 }
 
 .user-photo {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  position: relative;
 }
 
-/* Sections and content rhythm */
+/* Sections: no texture or tint on containers or image layers. */
 aside,
 section {
-  padding-top: clamp(4rem, 7vw, 6.5rem);
-  padding-bottom: clamp(4rem, 7vw, 6.5rem);
+  padding-top: clamp(3.2rem, 5.5vw, 5rem);
+  padding-bottom: clamp(3.2rem, 5.5vw, 5rem);
 }
 
 section header {
@@ -298,9 +308,9 @@ section header {
 
 section header::after {
   display: block;
-  width: 42px;
-  height: 2px;
-  margin-top: 1.15rem;
+  width: 30px;
+  height: 1px;
+  margin-top: .9rem;
   background: var(--accent-color);
   content: "";
   opacity: .8;
@@ -310,32 +320,45 @@ section header::after {
   --bs-gutter-x: 2rem;
 }
 
-/* Soft background panels used by the original template */
-.bg-gradient-primary-to-secondary-light {
-  background: linear-gradient(135deg, #EAE0CC 0%, #E3D7C1 100%) !important;
+:is(section, aside):not(.top-section):not(.top-bg):not(.bg-bottom) {
+  --section-bg: var(--sample-yellow-1);
+  background-color: var(--section-bg) !important;
 }
 
-.bg-gradient-primary-to-secondary-gray {
-  background: linear-gradient(135deg, #F2EBDD 0%, #EAE1D0 100%) !important;
+/* Count content sections only; a hero <section> must not shift the palette. */
+:nth-child(4n+2 of :is(section, aside):not(.top-section):not(.top-bg):not(.bg-bottom)) {
+  --section-bg: var(--sample-yellow-2);
 }
 
-.bg-bottom {
-  background: var(--footer-bg);
-  color: var(--footer-ink);
+:nth-child(4n+3 of :is(section, aside):not(.top-section):not(.top-bg):not(.bg-bottom)) {
+  --section-bg: var(--sample-yellow-3);
 }
 
+:nth-child(4n+4 of :is(section, aside):not(.top-section):not(.top-bg):not(.bg-bottom)) {
+  --section-bg: var(--sample-yellow-4);
+}
 
-/* Slightly richer warm-paper background for research/publication sections */
 section#research,
 section#publications,
 section.research-section,
 section.publications-section {
-  background-color: #EAE0CC;
+  --section-bg: var(--sample-yellow-2);
 }
 
-/* Links: understated editorial underline */
+/* First content section and mobile portrait use exactly the same color. */
+:nth-child(1 of :is(section, aside):not(.top-section):not(.top-bg):not(.bg-bottom)) {
+  --section-bg: var(--first-section-bg) !important;
+}
+
+/* Remove only the template's named panel gradients, never the hero image. */
+:is(.bg-gradient-primary-to-secondary-light, .bg-gradient-primary-to-secondary-gray):not(.top-section):not(.top-bg):not(.top-section *):not(.top-bg *) {
+  background-color: var(--section-bg, var(--first-section-bg)) !important;
+  background-image: none !important;
+}
+
+/* Links */
 a {
-  color: var(--h-title-color);
+  color: #5C6956;
   text-decoration: none;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
@@ -344,15 +367,14 @@ a {
 
 a:hover,
 a:focus-visible {
-  color: var(--accent-color);
+  color: #414D3D;
 }
 
 .main-body a,
 section .main-body a {
   text-decoration: underline;
-  text-decoration-color: rgba(152, 114, 76, .42);
+  text-decoration-color: rgba(80, 99, 84, .35);
   text-underline-offset: 3px;
-  transition: color .2s ease, text-decoration-color .2s ease;
 }
 
 .main-body a:hover,
@@ -366,69 +388,65 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
-/* Cards, publication lists and other Bootstrap content blocks */
+/* Cards remain transparent against their containing section. */
 .card {
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius-card);
-  background: var(--bg-paper);
-  box-shadow: 0 4px 16px rgba(38, 49, 42, .035);
-  transition: transform .28s var(--ease), box-shadow .28s var(--ease), border-color .28s ease;
+  transition: border-color .2s ease;
+}
+
+.card,
+.card-header,
+.card-footer {
+  background: transparent !important;
+  border-color: var(--line);
+  box-shadow: none !important;
 }
 
 .card:hover {
   border-color: var(--line-strong);
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-3px);
-}
-
-.card-header,
-.card-footer {
-  border-color: var(--line);
-  background: rgba(240, 237, 228, .55);
+  box-shadow: none !important;
+  transform: none !important;
 }
 
 /* Buttons */
 .btn {
-  border-radius: 6px;
-  font-family: "DM Sans", sans-serif;
-  font-size: .88rem;
-  font-weight: 600;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: .94rem;
+  font-weight: 500;
   letter-spacing: .02em;
-  transition: transform .2s var(--ease), box-shadow .2s ease, background-color .2s ease, border-color .2s ease;
+  box-shadow: none !important;
+  transform: none !important;
+  transition: background-color .2s ease, border-color .2s ease;
 }
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: var(--h-title-color);
-  --bs-btn-border-color: var(--h-title-color);
+  --bs-btn-bg: var(--sample-green);
+  --bs-btn-border-color: var(--sample-green);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #263A32;
-  --bs-btn-hover-border-color: #263A32;
-  --bs-btn-active-bg: #263A32;
-  --bs-btn-active-border-color: #263A32;
-  --bs-btn-focus-shadow-rgb: 53, 72, 63;
-}
-
-.btn-primary:hover,
-.btn-outline-primary:hover {
-  box-shadow: 0 7px 18px rgba(53, 72, 63, .16);
-  transform: translateY(-2px);
+  --bs-btn-hover-bg: var(--sample-green-deep);
+  --bs-btn-hover-border-color: var(--sample-green-deep);
+  --bs-btn-active-bg: var(--sample-green-deep);
+  --bs-btn-active-border-color: var(--sample-green-deep);
+  --bs-btn-focus-shadow-rgb: 80, 90, 76;
 }
 
 .btn-outline-primary {
-  --bs-btn-color: var(--h-title-color);
-  --bs-btn-border-color: var(--h-title-color);
+  --bs-btn-color: var(--sample-green-deep);
+  --bs-btn-border-color: #929681;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: var(--h-title-color);
-  --bs-btn-hover-border-color: var(--h-title-color);
-  --bs-btn-focus-shadow-rgb: 53, 72, 63;
+  --bs-btn-hover-bg: var(--sample-green);
+  --bs-btn-hover-border-color: var(--sample-green);
+  --bs-btn-focus-shadow-rgb: 80, 90, 76;
 }
 
-/* Tables and publication metadata */
 .table {
   --bs-table-color: var(--ink);
   --bs-table-border-color: var(--line);
+  --bs-table-bg: transparent;
   font-size: .94rem;
 }
 
@@ -440,19 +458,141 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
+/* Publications: the same size as the preceding section's body text.
+   Covers both semantic classes and the existing Markdown-generated list. */
+.publication-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 1.5rem 0 0;
+  font-size: var(--body-font-size);
+}
+
+.publication {
+  padding: 1.15rem 0 1.2rem;
+  border-bottom: 1px solid var(--line);
+  background-color: transparent !important;
+  font-size: var(--body-font-size);
+}
+
+.publication:first-child {
+  padding-top: .35rem;
+}
+
+.publication-title,
+section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
+  display: block;
+  margin: 0 0 .42rem;
+  color: var(--ink) !important;
+  font-family: var(--font-body) !important;
+  font-size: var(--body-font-size) !important;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.publication:hover .publication-title {
+  color: var(--ink) !important;
+}
+
+.publication-authors {
+  margin: 0 0 .5rem;
+  color: var(--ink-soft);
+  font-size: var(--body-font-size);
+  line-height: 1.65;
+}
+
+.publication-authors a {
+  color: #5C6956;
+  text-decoration: underline;
+  text-decoration-color: rgba(82, 107, 91, .28);
+  text-underline-offset: 3px;
+}
+
+.publication-status {
+  margin: .12rem 0 .28rem;
+  color: #555F50;
+  font-size: var(--body-font-size);
+  line-height: 1.6;
+}
+
+.publication-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .25rem .7rem;
+  margin: .18rem 0 0;
+  color: #68705F;
+  font-size: var(--body-font-size);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: .015em;
+}
+
+.publication-meta a {
+  color: #626C58;
+  font-size: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.publication-meta a:hover {
+  color: #414D3D;
+  text-decoration: underline;
+}
+
+.publication-meta .meta-separator {
+  color: #949884;
+}
+
+section .main-body ul:has(> li > strong:first-child) {
+  margin: 1.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+section .main-body ul:has(> li > strong:first-child) > li {
+  padding: 1.35rem 0 1.45rem;
+  border-bottom: 1px solid var(--line);
+  background-color: transparent !important;
+  list-style: none;
+  color: var(--ink-soft);
+  font-size: var(--body-font-size);
+  line-height: 1.7;
+}
+
+section .main-body ul:has(> li > strong:first-child) > li::marker {
+  content: "";
+}
+
+section .main-body ul:has(> li > strong:first-child) > li > br ~ a {
+  color: #626C58;
+  font-size: var(--body-font-size);
+  font-weight: 600;
+}
+
+section .main-body ul:has(> li > strong:first-child) > li > br ~ a:hover {
+  color: #414D3D;
+}
+
 /* Footer */
+.bg-bottom,
 footer {
-  padding-top: clamp(2.8rem, 6.48vw, 4.5rem) !important;
-  padding-bottom: clamp(2.8rem, 6.48vw, 4.5rem) !important;
-  background: var(--footer-bg);
-  color: var(--footer-ink);
-  letter-spacing: .025em;
+  background: var(--footer-bg) !important;
+  color: var(--footer-ink) !important;
+  border-top: 1px solid rgba(238, 231, 213, .14);
+  letter-spacing: 0;
+}
+
+footer {
+  padding-top: 2.2rem !important;
+  padding-bottom: 2.2rem !important;
 }
 
 footer a {
-  color: rgba(243, 238, 227, .76);
+  color: var(--footer-ink);
   text-decoration: none;
-  transition: color .2s ease;
 }
 
 footer a:hover,
@@ -462,42 +602,33 @@ footer a:focus-visible {
 }
 
 .footer-quote {
-  color: rgba(243, 238, 227, .78);
-  font-family: "Newsreader", Georgia, serif;
-  font-size: clamp(.78rem, 1.15vw, .9rem);
-  font-style: italic;
+  color: var(--footer-ink);
+  font-family: var(--font-body);
+  font-size: .78rem;
+  font-style: normal;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .footer-meta {
   margin-top: .8rem;
-  color: rgba(243, 238, 227, .52);
+  color: var(--footer-ink);
   font-size: .72rem;
   font-weight: 400;
   line-height: 1.7;
-  letter-spacing: .045em;
+  letter-spacing: .01em;
 }
 
 .footer-meta a {
   color: inherit;
 }
 
-.footer-meta a:hover {
-  color: rgba(255, 255, 255, .9);
-}
-
-/* Subtle entrance for in-page anchors; no dependency on JavaScript */
 [id] {
   scroll-margin-top: 6rem;
 }
 
 /* Responsive refinements */
 @media (max-width: 991.98px) {
-  body #mainNav {
-    min-height: 68px;
-  }
-
   body #mainNav .navbar-nav .nav-item .nav-link {
     margin: .12rem 0;
     padding: .7rem .25rem;
@@ -516,23 +647,33 @@ footer a:focus-visible {
 }
 
 @media (max-width: 767.98px) {
+  .user-photo {
+    background-color: var(--first-section-bg) !important;
+  }
+
   #avatar {
     position: static !important;
     top: auto !important;
+    right: auto !important;
     float: none !important;
     clear: both;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: none;
     height: auto !important;
-    margin: 1.25rem auto 1.5rem !important;
+    margin: 0 auto !important;
+    padding: 1.5rem 0 !important;
+    background: var(--first-section-bg) !important;
     z-index: 1;
   }
 
   #avatar img {
     display: block;
     margin: 0 auto;
+    border-color: var(--first-section-bg);
+    background-color: var(--first-section-bg);
   }
 
   .top-section {
@@ -546,29 +687,26 @@ footer a:focus-visible {
     font-size: clamp(2.35rem, 11.88vw, 3.5rem);
   }
 
-  aside,
-  section {
-    padding-top: 3.7rem;
-    padding-bottom: 3.7rem;
-  }
-
   .container {
     --bs-gutter-x: 1.5rem;
   }
 }
 
 @media (max-width: 576px) {
-  body {
-    font-size: .9375rem;
+  :root {
+    --body-font-size: 1.02rem;
   }
 
-  section header h2 {
-    font-size: 1.9rem;
+  html {
+    font-size: 105% !important;
   }
 
   section .main-body {
-    font-size: .98rem;
     line-height: 1.8;
+  }
+
+  section header h2 {
+    font-size: 2rem;
   }
 
   .top-section {
@@ -577,38 +715,25 @@ footer a:focus-visible {
     background-position: 58% center;
   }
 
-  /* Mobile portrait occupies its own row; never overlaps the text below. */
-  #avatar {
-    position: static !important;
-    top: auto !important;
-    right: auto !important;
-    float: none !important;
-    clear: both;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto !important;
-    margin: 1.25rem auto 1.5rem !important;
-    z-index: 1;
-  }
-
   #avatar img {
-    display: block;
     width: 116px;
     max-width: 38vw;
     height: auto;
-    margin: 0 auto;
     border-width: 4px;
     border-radius: 8px;
   }
 
-  footer {
-    letter-spacing: .015em;
+  .publication {
+    padding: 1.15rem 0 1.25rem;
   }
 
-  .footer-meta {
-    font-size: .68rem;
+  footer {
+    padding-top: 1.8rem !important;
+    padding-bottom: 1.8rem !important;
+  }
+
+  .footer-quote {
+    font-size: .74rem;
   }
 }
 
@@ -622,562 +747,3 @@ footer a:focus-visible {
     animation-iteration-count: 1 !important;
   }
 }
-
-/* ---------------------------------------------------------
-   RESEARCH / WORKING PAPERS
-   Use .publication-list > .publication for precise control.
-   The ul/li rules below also remove bullets from the current
-   Markdown-style publication list.
-   --------------------------------------------------------- */
-
-/* Preferred semantic markup */
-.publication-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  margin: 1.5rem 0 0;
-}
-
-.publication {
-  padding: 1.45rem 0 1.55rem;
-  border-bottom: 1px solid var(--line);
-}
-
-.publication:first-child {
-  padding-top: .35rem;
-}
-
-.publication-title {
-  display: block;
-  margin: 0 0 .42rem;
-  color: var(--ink);
-  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: clamp(1.12rem, 1.55vw, 1.28rem);
-  font-weight: 600;
-  line-height: 1.45;
-  letter-spacing: 0;
-}
-
-.publication-authors {
-  margin: 0 0 .5rem;
-  color: #4F5D53;
-  font-size: .96rem;
-  line-height: 1.65;
-}
-
-.publication-authors a {
-  color: #3E604B;
-  text-decoration: underline;
-  text-decoration-color: rgba(82, 107, 91, .28);
-  text-underline-offset: 3px;
-}
-
-.publication-status {
-  margin: .12rem 0 .28rem;
-  color: #3D4941;
-  font-size: .92rem;
-  line-height: 1.6;
-}
-
-.publication-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: .25rem .7rem;
-  margin: .18rem 0 0;
-  color: #6E766D;
-  font-size: .76rem;
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: .015em;
-}
-
-.publication-meta a {
-  color: #895B32;
-  font-size: inherit;
-  font-weight: 600;
-  text-decoration: none;
-  text-decoration-color: rgba(128, 96, 68, .35);
-  text-underline-offset: 3px;
-}
-
-.publication-meta a:hover {
-  color: #3E604B;
-  text-decoration: underline;
-}
-
-.publication-meta .meta-separator {
-  color: #B4B2A9;
-}
-
-/* Bullet-free styling for the existing Markdown-generated ul/li list.
-   The first bold phrase is treated as the paper title. */
-section .main-body ul:has(> li > strong:first-child) {
-  margin: 1.35rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-section .main-body ul:has(> li > strong:first-child) > li {
-  padding: 1.35rem 0 1.45rem;
-  border-bottom: 1px solid var(--line);
-  list-style: none;
-  color: #4F5D53;
-  font-size: .96rem;
-  line-height: 1.7;
-}
-
-section .main-body ul:has(> li > strong:first-child) > li::marker {
-  content: "";
-}
-
-section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
-  display: block;
-  margin: 0 0 .42rem;
-  color: #3E604B;
-  font-family: "Newsreader", Georgia, serif;
-  font-size: clamp(1.42rem, 2.322vw, 1.82rem);
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: -.025em;
-}
-
-section .main-body ul:has(> li > strong:first-child) > li > br ~ a {
-  color: #895B32;
-  font-size: .78rem;
-  font-weight: 600;
-}
-
-section .main-body ul:has(> li > strong:first-child) > li > br ~ a:hover {
-  color: #3E604B;
-}
-
-@media (max-width: 576px) {
-  .publication {
-    padding: 1.15rem 0 1.25rem;
-  }
-
-  .publication-title,
-  section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
-    font-size: 1.35rem;
-  }
-
-  .publication-authors,
-  section .main-body ul:has(> li > strong:first-child) > li {
-    font-size: .91rem;
-  }
-
-  .publication-meta,
-  section .main-body ul:has(> li > strong:first-child) > li > br ~ a {
-    font-size: .73rem;
-  }
-}
-
-
-/* ---------------------------------------------------------
-   FINAL OVERRIDES — ensure legacy styles cannot reintroduce
-   blur, opacity, or a pale veil over the Chinese painting.
-   --------------------------------------------------------- */
-.header,
-body #mainNav {
-  -webkit-backdrop-filter: none !important;
-  backdrop-filter: none !important;
-}
-
-.top-section,
-.top-bg {
-  filter: none !important;
-}
-
-.top-section::before,
-.top-bg::before {
-  content: none !important;
-  display: none !important;
-}
-
-/* Keep the paper-and-ink palette consistent across the page. */
-body {
-  background-color: #F8F6F0;
-}
-
-.bg-bottom,
-footer {
-  background-color: #263A32 !important;
-}
-
-/* Slightly more refined publication typography. */
-.publication-title,
-section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
-  color: #40594B;
-  font-size: clamp(1.55rem, 2.538vw, 1.95rem);
-  line-height: 1.24;
-}
-
-.publication-meta,
-section .main-body ul:has(> li > strong:first-child) > li > br ~ a {
-  color: #89877E;
-  font-size: .76rem;
-}
-
-.publication-meta a,
-section .main-body ul:has(> li > strong:first-child) > li > br ~ a {
-  color: #8A6546;
-}
-
-@media (max-width: 576px) {
-  .publication-title,
-  section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
-    font-size: 1.42rem;
-  }
-}
-
-/* FINAL OVERRIDES: requested typography and color refinements */
-html { font-size: 115%; }
-.footer-quote { font-size: clamp(.78rem, 1.15vw, .9rem); }
-.publication-title {
-  color: var(--ink) !important;
-  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
-  font-size: clamp(1.12rem, 1.55vw, 1.28rem) !important;
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: 1.45;
-}
-.publication:hover .publication-title { color: var(--ink) !important; }
-
-/* Mobile avatar: match the first section background */
-@media (max-width: 767.98px) {
-    #avatar {
-        background: linear-gradient(
-            135deg,
-            #EAE0CC 0%,
-            #E3D7C1 100%
-        ) !important;
-
-        padding: 1.5rem 0 !important;
-        margin: 0 auto !important;
-
-        position: static !important;
-        float: none !important;
-        height: auto !important;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #avatar img {
-        margin: 0 auto;
-        display: block;
-    }
-}
-
-
-/* =========================================================
-   REFINED MINIMAL THEME
-   Softer header/footer, quieter typography, and fewer effects.
-   Appended overrides intentionally take precedence over the
-   earlier theme rules while preserving the existing layout.
-   ========================================================= */
-
-:root {
-  --h-title-color: #405247;
-  --accent-color: #8A806D;
-  --bg-main: #F7F7F3;
-  --bg-paper: #FCFCF9;
-  --bg-soft: #ECEDE6;
-  --ink: #303630;
-  --ink-soft: #687068;
-  --line: rgba(64, 82, 71, .13);
-  --line-strong: rgba(64, 82, 71, .22);
-  --nav-bg: #E9ECE6;
-  --footer-bg: #E9ECE6;
-  --footer-ink: #465148;
-  --shadow-soft: none;
-  --shadow-hover: none;
-  --radius-card: 5px;
-}
-
-/* A more restrained, consistent type scale. */
-html {
-  font-size: 100%;
-}
-
-body {
-  background: var(--bg-main);
-  color: var(--ink);
-  font-size: 1rem;
-  line-height: 1.7;
-  letter-spacing: 0;
-}
-
-/* Header: pale sage rather than a strong accent block. */
-.header,
-body #mainNav {
-  background: var(--nav-bg) !important;
-  border-bottom: 1px solid rgba(64, 82, 71, .12);
-  box-shadow: none !important;
-}
-
-body #mainNav {
-  min-height: 68px;
-  padding-top: .55rem;
-  padding-bottom: .55rem;
-}
-
-body #mainNav .navbar-brand,
-body #mainNav .navbar-nav .nav-item .nav-link,
-body #mainNav .navbar-toggler {
-  color: #4C5A50 !important;
-}
-
-body #mainNav .navbar-brand {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-body #mainNav .navbar-brand:hover,
-body #mainNav .navbar-brand:active,
-body #mainNav .navbar-nav .nav-item .nav-link:hover,
-body #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #27372D !important;
-}
-
-body #mainNav .navbar-nav .nav-item .nav-link {
-  font-size: .82rem;
-  font-weight: 500;
-  letter-spacing: .015em;
-}
-
-body #mainNav .navbar-nav .nav-item .nav-link::after {
-  background: #879487;
-  height: 1px;
-}
-
-body #mainNav .navbar-toggler {
-  border-color: rgba(64, 82, 71, .25) !important;
-}
-
-/* Keep the hero artwork intact; remove decorative embellishment. */
-.top-section {
-  border-bottom: 1px solid var(--line);
-}
-
-.top-section::after {
-  height: 1px;
-  background: rgba(64, 82, 71, .16);
-}
-
-/* Quieter page rhythm and cleaner section headings. */
-aside,
-section {
-  padding-top: clamp(3.2rem, 5.5vw, 5rem);
-  padding-bottom: clamp(3.2rem, 5.5vw, 5rem);
-}
-
-section header h2 {
-  font-size: clamp(1.8rem, 3vw, 2.35rem);
-  letter-spacing: -.02em;
-}
-
-section header::after {
-  width: 30px;
-  height: 1px;
-  margin-top: .9rem;
-  background: #9A9F91;
-  opacity: .8;
-}
-
-section .main-body {
-  max-width: 72ch;
-  color: #414941;
-  font-size: 1.04rem;
-  line-height: 1.8;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-/* Neutral backgrounds replace pronounced gradients. */
-body,
-.bg-gradient-primary-to-secondary-light,
-.bg-gradient-primary-to-secondary-gray,
-section#research,
-section#publications,
-section.research-section,
-section.publications-section {
-  background: var(--bg-main) !important;
-}
-
-.bg-gradient-primary-to-secondary-light,
-.bg-gradient-primary-to-secondary-gray {
-  background-image: none !important;
-}
-
-/* Cards: simple paper surfaces, no lift or heavy shadow. */
-.card {
-  border: 1px solid var(--line);
-  border-radius: 5px;
-  background: var(--bg-paper);
-  box-shadow: none;
-  transition: border-color .2s ease;
-}
-
-.card:hover {
-  border-color: var(--line-strong);
-  box-shadow: none;
-  transform: none;
-}
-
-.card-header,
-.card-footer {
-  background: #F3F4EF;
-  border-color: var(--line);
-}
-
-/* Restrained links and controls. */
-a {
-  color: #506354;
-}
-
-a:hover,
-a:focus-visible {
-  color: #303F34;
-}
-
-.main-body a,
-section .main-body a {
-  text-decoration-color: rgba(80, 99, 84, .35);
-}
-
-.btn {
-  border-radius: 4px;
-  box-shadow: none !important;
-  transform: none !important;
-  font-weight: 500;
-}
-
-.btn-primary {
-  --bs-btn-bg: #596B5D;
-  --bs-btn-border-color: #596B5D;
-  --bs-btn-hover-bg: #48594C;
-  --bs-btn-hover-border-color: #48594C;
-  --bs-btn-active-bg: #48594C;
-  --bs-btn-active-border-color: #48594C;
-}
-
-.btn-outline-primary {
-  --bs-btn-color: #596B5D;
-  --bs-btn-border-color: #879487;
-  --bs-btn-hover-bg: #596B5D;
-  --bs-btn-hover-border-color: #596B5D;
-}
-
-/* Publications: compact, readable, and free of oversized display text. */
-.publication {
-  padding: 1.15rem 0 1.2rem;
-  border-bottom-color: var(--line);
-}
-
-.publication-title,
-section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
-  color: #303A33 !important;
-  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
-  font-size: 1.08rem !important;
-  font-weight: 600;
-  line-height: 1.45;
-  letter-spacing: 0;
-}
-
-.publication-authors,
-section .main-body ul:has(> li > strong:first-child) > li {
-  color: #59635A;
-  font-size: .94rem;
-}
-
-.publication-meta,
-section .main-body ul:has(> li > strong:first-child) > li > br ~ a {
-  color: #7A8279;
-  font-size: .75rem;
-}
-
-.publication-meta a,
-section .main-body ul:has(> li > strong:first-child) > li > br ~ a {
-  color: #697B6B;
-}
-
-/* Footer: light, quiet, and typographically subordinate. */
-.bg-bottom,
-footer {
-  background: #E9ECE6 !important;
-  color: #4B554C !important;
-  border-top: 1px solid rgba(64, 82, 71, .12);
-  letter-spacing: 0;
-}
-
-footer {
-  padding-top: 2.2rem !important;
-  padding-bottom: 2.2rem !important;
-}
-
-footer a {
-  color: #596B5D;
-}
-
-footer a:hover,
-footer a:focus-visible {
-  color: #303F34;
-}
-
-.footer-quote {
-  color: #687268;
-  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: .76rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.6;
-}
-
-.footer-meta {
-  color: #7B837A;
-  font-size: .68rem;
-  letter-spacing: .01em;
-}
-
-/* Remove unnecessary motion and hover decoration. */
-.card,
-.card:hover,
-.btn,
-.btn:hover,
-#avatar img,
-#avatar img:hover {
-  transform: none;
-  box-shadow: none;
-}
-
-@media (max-width: 576px) {
-  body {
-    font-size: .95rem;
-  }
-
-  section .main-body {
-    font-size: .98rem;
-  }
-
-  footer {
-    padding-top: 1.8rem !important;
-    padding-bottom: 1.8rem !important;
-  }
-
-  .footer-quote {
-    font-size: .72rem;
-  }
-}
-
-
-/* =========================================================
-   XUAN-PAPER PALETTE OVERRIDES
-   Extracted from the reference painting:
-   - header yellow: #C9AE7A
-   - footer green: #6B705A
-  
