@@ -871,3 +871,306 @@ html { font-size: 115%; }
         display: block;
     }
 }
+
+
+/* =========================================================
+   REFINED MINIMAL THEME
+   Softer header/footer, quieter typography, and fewer effects.
+   Appended overrides intentionally take precedence over the
+   earlier theme rules while preserving the existing layout.
+   ========================================================= */
+
+:root {
+  --h-title-color: #405247;
+  --accent-color: #8A806D;
+  --bg-main: #F7F7F3;
+  --bg-paper: #FCFCF9;
+  --bg-soft: #ECEDE6;
+  --ink: #303630;
+  --ink-soft: #687068;
+  --line: rgba(64, 82, 71, .13);
+  --line-strong: rgba(64, 82, 71, .22);
+  --nav-bg: #E9ECE6;
+  --footer-bg: #E9ECE6;
+  --footer-ink: #465148;
+  --shadow-soft: none;
+  --shadow-hover: none;
+  --radius-card: 5px;
+}
+
+/* A more restrained, consistent type scale. */
+html {
+  font-size: 100%;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+
+/* Header: pale sage rather than a strong accent block. */
+.header,
+body #mainNav {
+  background: var(--nav-bg) !important;
+  border-bottom: 1px solid rgba(64, 82, 71, .12);
+  box-shadow: none !important;
+}
+
+body #mainNav {
+  min-height: 68px;
+  padding-top: .55rem;
+  padding-bottom: .55rem;
+}
+
+body #mainNav .navbar-brand,
+body #mainNav .navbar-nav .nav-item .nav-link,
+body #mainNav .navbar-toggler {
+  color: #4C5A50 !important;
+}
+
+body #mainNav .navbar-brand {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+body #mainNav .navbar-brand:hover,
+body #mainNav .navbar-brand:active,
+body #mainNav .navbar-nav .nav-item .nav-link:hover,
+body #mainNav .navbar-nav .nav-item .nav-link.active {
+  color: #27372D !important;
+}
+
+body #mainNav .navbar-nav .nav-item .nav-link {
+  font-size: .82rem;
+  font-weight: 500;
+  letter-spacing: .015em;
+}
+
+body #mainNav .navbar-nav .nav-item .nav-link::after {
+  background: #879487;
+  height: 1px;
+}
+
+body #mainNav .navbar-toggler {
+  border-color: rgba(64, 82, 71, .25) !important;
+}
+
+/* Keep the hero artwork intact; remove decorative embellishment. */
+.top-section {
+  border-bottom: 1px solid var(--line);
+}
+
+.top-section::after {
+  height: 1px;
+  background: rgba(64, 82, 71, .16);
+}
+
+/* Quieter page rhythm and cleaner section headings. */
+aside,
+section {
+  padding-top: clamp(3.2rem, 5.5vw, 5rem);
+  padding-bottom: clamp(3.2rem, 5.5vw, 5rem);
+}
+
+section header h2 {
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  letter-spacing: -.02em;
+}
+
+section header::after {
+  width: 30px;
+  height: 1px;
+  margin-top: .9rem;
+  background: #9A9F91;
+  opacity: .8;
+}
+
+section .main-body {
+  max-width: 72ch;
+  color: #414941;
+  font-size: 1.04rem;
+  line-height: 1.8;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Neutral backgrounds replace pronounced gradients. */
+body,
+.bg-gradient-primary-to-secondary-light,
+.bg-gradient-primary-to-secondary-gray,
+section#research,
+section#publications,
+section.research-section,
+section.publications-section {
+  background: var(--bg-main) !important;
+}
+
+.bg-gradient-primary-to-secondary-light,
+.bg-gradient-primary-to-secondary-gray {
+  background-image: none !important;
+}
+
+/* Cards: simple paper surfaces, no lift or heavy shadow. */
+.card {
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--bg-paper);
+  box-shadow: none;
+  transition: border-color .2s ease;
+}
+
+.card:hover {
+  border-color: var(--line-strong);
+  box-shadow: none;
+  transform: none;
+}
+
+.card-header,
+.card-footer {
+  background: #F3F4EF;
+  border-color: var(--line);
+}
+
+/* Restrained links and controls. */
+a {
+  color: #506354;
+}
+
+a:hover,
+a:focus-visible {
+  color: #303F34;
+}
+
+.main-body a,
+section .main-body a {
+  text-decoration-color: rgba(80, 99, 84, .35);
+}
+
+.btn {
+  border-radius: 4px;
+  box-shadow: none !important;
+  transform: none !important;
+  font-weight: 500;
+}
+
+.btn-primary {
+  --bs-btn-bg: #596B5D;
+  --bs-btn-border-color: #596B5D;
+  --bs-btn-hover-bg: #48594C;
+  --bs-btn-hover-border-color: #48594C;
+  --bs-btn-active-bg: #48594C;
+  --bs-btn-active-border-color: #48594C;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #596B5D;
+  --bs-btn-border-color: #879487;
+  --bs-btn-hover-bg: #596B5D;
+  --bs-btn-hover-border-color: #596B5D;
+}
+
+/* Publications: compact, readable, and free of oversized display text. */
+.publication {
+  padding: 1.15rem 0 1.2rem;
+  border-bottom-color: var(--line);
+}
+
+.publication-title,
+section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
+  color: #303A33 !important;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: 1.08rem !important;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+
+.publication-authors,
+section .main-body ul:has(> li > strong:first-child) > li {
+  color: #59635A;
+  font-size: .94rem;
+}
+
+.publication-meta,
+section .main-body ul:has(> li > strong:first-child) > li > br ~ a {
+  color: #7A8279;
+  font-size: .75rem;
+}
+
+.publication-meta a,
+section .main-body ul:has(> li > strong:first-child) > li > br ~ a {
+  color: #697B6B;
+}
+
+/* Footer: light, quiet, and typographically subordinate. */
+.bg-bottom,
+footer {
+  background: #E9ECE6 !important;
+  color: #4B554C !important;
+  border-top: 1px solid rgba(64, 82, 71, .12);
+  letter-spacing: 0;
+}
+
+footer {
+  padding-top: 2.2rem !important;
+  padding-bottom: 2.2rem !important;
+}
+
+footer a {
+  color: #596B5D;
+}
+
+footer a:hover,
+footer a:focus-visible {
+  color: #303F34;
+}
+
+.footer-quote {
+  color: #687268;
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: .76rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.footer-meta {
+  color: #7B837A;
+  font-size: .68rem;
+  letter-spacing: .01em;
+}
+
+/* Remove unnecessary motion and hover decoration. */
+.card,
+.card:hover,
+.btn,
+.btn:hover,
+#avatar img,
+#avatar img:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: .95rem;
+  }
+
+  section .main-body {
+    font-size: .98rem;
+  }
+
+  footer {
+    padding-top: 1.8rem !important;
+    padding-bottom: 1.8rem !important;
+  }
+
+  .footer-quote {
+    font-size: .72rem;
+  }
+}
