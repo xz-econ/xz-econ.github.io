@@ -504,10 +504,6 @@ section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
 
 .publication-authors a {
   color: #5C6956;
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-color: rgba(82, 107, 91, .28);
-  text-underline-offset: 3px;
 }
 
 .publication-status {
@@ -535,12 +531,10 @@ section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
   font-size: inherit;
   font-weight: 400;
   text-decoration: none;
-  text-underline-offset: 3px;
 }
 
 .publication-meta a:hover {
   color: #414D3D;
-  text-decoration: underline;
 }
 
 .publication-meta .meta-separator {
