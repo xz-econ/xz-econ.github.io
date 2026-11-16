@@ -533,7 +533,7 @@ section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
 .publication-meta a {
   color: #626C58;
   font-size: inherit;
-  font-weight: 450;
+  font-weight: 400;
   text-decoration: none;
   text-underline-offset: 3px;
 }
