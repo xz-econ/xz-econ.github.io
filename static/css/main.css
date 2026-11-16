@@ -504,6 +504,7 @@ section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
 
 .publication-authors a {
   color: #5C6956;
+  font-weight: 500;
   text-decoration: underline;
   text-decoration-color: rgba(82, 107, 91, .28);
   text-underline-offset: 3px;
@@ -532,7 +533,7 @@ section .main-body ul:has(> li > strong:first-child) > li > strong:first-child {
 .publication-meta a {
   color: #626C58;
   font-size: inherit;
-  font-weight: 400;
+  font-weight: 450;
   text-decoration: none;
   text-underline-offset: 3px;
 }
