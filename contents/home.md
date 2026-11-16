@@ -2,7 +2,7 @@ I am a PhD student in Economics at Renmin University of China.
 
 #### Contact
 
-Email: xuzhang@ruc.edu.cn
+Email: xuzhang(at)ruc(dot)edu(dot)cn
 
 #### Education
 
